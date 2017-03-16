@@ -226,11 +226,25 @@ a:hover, .current a {
     height: 1.1em;
     overflow: hidden;
 }
+
 .product-item p{
     color: #555!important;
     height: 5.4em;
     overflow: hidden;
 }
+
+
+/*teresa 0316新增 開始*/
+.product-item h3:hover {
+    color: #00acec!important;
+}
+
+.product-item p:hover{
+    color: rgba(75, 75, 75, .8)!important;
+}
+/*teresa 0316新增 結束*/
+
+
 .product-item .dollar{
     font-size: 16px;
     color: #555;
@@ -1057,7 +1071,7 @@ input[type="checkbox"] + label {
     margin-top: 30px;
     float: right;
 }
-.movie-story-content{ font-size: 16px; font-weight: 600;}
+.movie-story-content{ font-size: 16px; font-weight: 300;}
 .movie-story-content p{ margin-bottom: 30px;display: block;}
 
 /*social-icon-list*/
@@ -1157,6 +1171,17 @@ input[type="checkbox"] + label {
 .dark-page-title h1,.dark-page-title ol li,.dark-page-title ol li a{
     color: #fff!important;
 }
+
+
+
+/*teresa 0316新增 開始*/
+.dark-page-title h1,.dark-page-title ol li,.dark-page-title ol li a:hover{
+    color: #00acec !important;
+}
+/*teresa 0316新增 結束*/
+
+
+
 #page-title h1{
     position: relative;
 }
@@ -1507,7 +1532,8 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .portfolio-notitle .por
 
     }
     .selected-section {
-        height: 463px;
+        height: 523px;
+         /*teresa 0316 改過高度，原始高度463px*/
         margin-bottom: 2%;
     }
     #footer h5 + p{ font-size: 15px; }
