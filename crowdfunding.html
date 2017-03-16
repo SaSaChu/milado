@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-TW">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="lazyweb.com.tw" />
+
+	<!-- Stylesheets
+	============================================= -->
+    <link rel="stylesheet" href="css/maincore.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no">
+    
+    <!--  Favicon Files -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    
+    <!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<!-- Document Title
+	============================================= -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/filmulus-style.css" type="text/css" />
+	<title>Filmulus</title>    
+    
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header" data-sticky-class="not-dark">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Logo"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Logo"></a>
+					</div><!-- #logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu">
+
+						<ul>
+							<li><a href="index.html"><div>首頁</div></a></li>
+                            <li class="current"><a href="crowdfunding.html"><div>募資案</div></a></li>
+                            <li><a href="index.html"><div>了解投資 </div></a></li>
+                            <li><a href="index.html"><div>如何運作</div></a></li>
+                            <li><a href="index.html"><div>關於我們</div></a></li>
+                            <li><a href="index.html"><div>聯絡我們</div></a></li>
+                            <li><a href="index.html"><div>募資申請</div></a></li>
+                            <li><a href="sign-in.html"><div>註冊 / 登入</div></a></li>						
+						</ul>
+
+						<!-- Top Search
+						============================================= -->
+						<div id="top-search">
+							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+							<form action="search.html" method="get">
+								<input type="text" name="q" class="form-control" value="" placeholder="搜尋">
+							</form>
+						</div><!-- #top-search end -->
+
+					</nav><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header>
+        <!-- #header end -->
+        
+        <!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-center crowdfunding dark-page-title">
+			<div class="container clearfix">
+				<h1>創作者在這裡繁榮</h1>
+
+				<ol class="breadcrumb">
+					<li><a href="index.html">首頁</a></li>
+					<li class="active">募資案</li>
+				</ol>
+			</div>
+		</section><!-- #page-title end -->
+        
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+        <!-- 上方搜尋BAR 開始-->   
+         <div id="select-bar">
+			<div class="container clearfix">
+				<div class="col_half nobottommargin">
+					<!-- Top Links
+					============================================= -->
+					<div class="select-item">
+						<ul class="sf-js-enabled clearfix" style="touch-action: pan-y;">
+							<li class="hot-case">
+                                <a href="#">
+                                    <b><i class="fa fa-list-ul" aria-hidden="true" style="margin-right:3px;"></i>
+                                        篩選項目
+                                    </b>
+                                </a>
+                            </li>
+                            <li class="tag-block"> 
+                                <a href="#" class="button button-rounded button-gray button-small">書籍和文學 <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="tag-block"> 
+                                <a href="#" class="button button-rounded button-gray button-small">兒童 <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li class="tag-block"> 
+                                <a href="#" class="button button-rounded button-gray button-small">化妝品 <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </li>
+						</ul>
+					</div><!-- .top-links end -->
+				</div>
+				<div class="col_half fright col_last nobottommargin">
+                    <!-- 搜尋區 -->
+					<div class="select-search">
+						<ul>
+							<li>
+                               <form class="search-bar-input">
+                                    <input type="text" class="field" name="s" id="s" placeholder="搜尋">
+                                    <a href="#"><i class="icon-search3"></i></a>
+                                </form>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">
+                                    <span>熱門募資案</span>
+                                    <i class="fa fa-angle-down" aria-hidden="true" style="margin-left:5px;"></i>
+                                </a>
+                                
+                                <ul style="display:none;">
+                                    <li><a href="#">熱門募資案</a></li>
+                                    <li><a href="#">最新募資案</a></li>
+                                    <li><a href="#">募資百分比</a></li>
+                                    <li><a href="#">募資總額</a></li>
+                                </ul>
+                            </li>
+						</ul>
+					</div><!-- #top-social end -->
+				</div>
+			</div>
+             
+            <!-- 項目篩選的內容 -->
+            <div>
+              <div class="tabs clearfix select-item-drop hot-case-content" id="tab-3" style="display:none;">
+                
+                <div class="container clearfix">  
+                    <ul class="tab-nav tab-nav2 clearfix">
+                        <li><a href="#tabs-9">階段一名稱</a></li>
+                        <li><a href="#tabs-10">階段二名稱</a></li>
+                        <li><a href="#tabs-11">階段三名稱</a></li>
+                    </ul>
+                    <a href="#" class="close-btn">
+                       <img src="images/close.png" alt="">
+                    </a>
+                </div>    
+                  
+                <div class="tab-container">
+                    
+                    <div class="tab-content clearfix" id="tabs-9">
+                        <div class="container clearfix">
+                            <ul class="tags">
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li class="active"><a href="#">書籍和文學</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+
+                            </ul>
+                            <hr>
+                            <div class="fleft">
+                                <span><strong>所選類別：</strong>藝術、化妝品、慈善機構</span>
+                            </div>
+
+                            <div class="fright two-buttons" style="margin-bottom:0;">
+                                <a href="#" class="button button-rounded button-border-lightgreen button-small apply">
+                                    <i class="fa fa-check" aria-hidden="true"></i>套用
+                                </a>
+                                <a href="#" class="button button-rounded button-darkteal button-small ">
+                                    <i class="fa fa-times" aria-hidden="true"></i>清除
+                                </a>
+                            </div>
+
+                        </div>            
+                    </div>
+                    <div class="tab-content clearfix" id="tabs-10">
+                        <div class="container clearfix">
+                            <ul class="tags">
+                                <li class="active"><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+
+                            </ul>
+                            <hr>
+                            <div class="fleft">
+                                <span><strong>所選類別：</strong>藝術、化妝品、慈善機構</span>
+                            </div>
+
+                            <div class="fright two-buttons" style="margin-bottom:0;">
+                                <a href="#" class="button button-rounded button-border-lightgreen button-small apply">
+                                    <i class="fa fa-check" aria-hidden="true"></i>套用
+                                </a>
+                                <a href="#" class="button button-rounded button-darkteal button-small ">
+                                    <i class="fa fa-times" aria-hidden="true"></i>清除
+                                </a>
+                            </div>
+
+                        </div>       
+                    </div>
+                    <div class="tab-content clearfix" id="tabs-11">
+                        <div class="container clearfix">
+                            <ul class="tags">
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">書籍和文學</a></li>
+                                <li class="active"><a href="#">人文藝術</a></li>
+                                <li><a href="#">廣告</a></li>
+                                <li><a href="#">書籍和文學告</a></li>
+                                <li><a href="#">人文藝術</a></li>
+
+                            </ul>
+                            <hr>
+                            <div class="fleft">
+                                <span><strong>所選類別：</strong>藝術、化妝品、慈善機構</span>
+                            </div>
+
+                            <div class="fright two-buttons" style="margin-bottom:0;">
+                                <a href="#" class="button button-rounded button-border-lightgreen button-small apply">
+                                    <i class="fa fa-check" aria-hidden="true"></i>套用
+                                </a>
+                                <a href="#" class="button button-rounded button-darkteal button-small ">
+                                    <i class="fa fa-times" aria-hidden="true"></i>清除
+                                </a>
+                            </div>
+
+                        </div>      
+                    </div>
+
+                </div>
+              </div>  
+            </div>
+             
+		</div>
+        <!-- 上方搜尋BAR 結束-->
+            
+        <!-- 內容開始 -->
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <h2 class="title-style-05">篩選出<span>391</span>個募資案</h2>
+                <div class="col_full notice">
+                    此類投資會對您的資本帶來風險，同樣地也有淺在的獲利。再決定投資前，請閱讀我們的<a href="#">風險警告</a>和<a href="#">免責聲明</a>。
+                </div>
+                <div class="row">
+                    
+                    <div class="selected-section">
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>    
+                        
+                </div>
+                    <div class="selected-section">
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>    
+                        
+                </div>
+                <div class="selected-section">
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate active">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-item with-love-rate">
+                            <a href="crowdfunding-single.html">
+                            <img src="images/index/pic-01.jpg" alt="">    
+                                <div class="info">
+                                    <div class="fixed-pic">
+                                        <img src="images/index/fixed-pic.jpg" alt="">
+                                    </div>
+
+                                    <b class="tright gray-notice">剩餘30天</b>
+                                    <h3>請輸入募資標題請輸入募資標題請輸入募資標題請輸入募資標題</h3>
+                                    <p>你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的...</p>
+                                    <b class="dollar">目標 <i>$500,000</i></b>
+                                    <ul class="skills">
+                                        <li data-percent="60">
+                                            <div class="progress">
+                                                <div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="60" data-refresh-interval="30" data-speed="1100"></span>%</div></div>
+                                            </div>
+                                        </li>
+                                    </ul>  
+                                    <div class="detail">
+                                        <div class="col-md-4">
+                                            <b>$500000</b><br>目前募得
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>20.5%</b><br>股權
+                                        </div>
+                                        <div class="col-md-4">
+                                             <b>10000</b><br>投資人
+                                        </div>
+                                    </div>
+                                </div>		
+                            </a>
+                        </div>
+                    </div>    
+                        
+                </div>    
+                </div>
+                
+                <div class="center hidden-xs hidden-sm">
+                    <ul class="pagination">
+						<li><a href="#">«</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">»</a></li>
+					</ul>
+                </div>    
+            </div>
+        </div>
+        <!-- 內容結束 -->
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+			<!-- Footer Widgets
+			============================================= -->
+			<div class="footer-widgets-wrap clearfix nobottompadding">
+                    
+					<div class="col_full">
+                        <h5>風險警告</h5>
+						<p>投資初創企業和早期業務涉及風險，包括流動性不足，缺乏股利，投資和稀釋損失，並且它只應作為多元化投資組合的一部分。FILMulus專門針對那些了解這些風險並做出自己的投資決策的投資者。一旦您註冊成功，您將只能通過FILMulus投資。<br>請點擊這裡閱讀<a href="#" class="blue-link">完整的風險警告</a>。 本頁面被FILMulus批准為金融促銷活動，由金融市場行為監管局授權和監管。投資的投資不是向公眾提供，投資只能由FILMulus.com的成員根據有關公司提供的信息提供。FILMulus對此信息或公司提出的任何建議或意見不承擔任何責任。</p>
+					</div>
+                    <div class="clear"></div>
+                    
+                    <div class="col_one_third nomargimbottom">
+						<img src="images/footer-logo.png" alt="">
+						<p>
+                        眾籌是一種企業融資的替代方法，他允許日常投資者，專業人士和風險投資家透過線上平台，投入可多可少的資金。他允許日常投資者，專業人士和風險投資家透過線上平台，投入可多可少的資金。<br>眾籌是一種企業融資的替代方法，他允許日常投資者，專業人士和風險投資家透過線上平台，投入可多可少的資金。
+                        </p>
+					</div>
+                    <div class="col_two_third col_last nomargimbottom">
+                        <div class="col_one_fourth">
+                           <h5>募資</h5>
+                           <ul>
+                               <li><a href="#">募資案</a></li>
+                               <li><a href="#">了解投資</a></li> 
+                               <li><a href="#">如何運作</a></li> 
+                               <li><a href="#">關於我們</a></li> 
+                               <li><a href="#">聯絡我們</a></li> 
+                           </ul>
+                        </div>
+                        <div class="col_one_fourth">
+                            <h5>幫助</h5>
+                            <ul>
+                               <li><a href="#">常見問題</a></li>
+                               <li><a href="#">會員中心</a></li> 
+                               <li><a href="#">使用者條款</a></li> 
+                               <li><a href="#">隱私權政策</a></li> 
+                               <li><a href="#">風險警告</a></li> 
+                           </ul>
+                        </div>
+                        <div class="col_two_fourth col_last">
+						<h5>聯絡</h5>
+                            <ul>
+                               <li>電話：(02)1234-5678</li>
+                               <li>傳真：(02)1234-5678</li> 
+                               <li>電子郵件：service@lazyweb.com.tw</li> 
+                               <li>地址：新北市三重區重陽路四段20號5F</li> 
+                           </ul>
+					</div>
+                        <div class="clear"></div>
+				    </div><!-- .footer-widgets-wrap end -->
+                
+                <div class="line"></div>
+                
+                <div class="center">
+                    <p>Copyright© FILMulus. All Right Reserved.  <a href="https://www.lazyweb.com.tw/" target="_blank">LAZYWEB 網頁設計</a></p>
+                </div>
+
+			</div>
+                
+            </div>    
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+    
+    
+    <!-- 項目篩選 -->
+    <script>
+    $(document).ready(function(){
+        $(".hot-case").mouseover(function(){
+            $(".hot-case-content").show();
+        });
+        
+        $(".hot-case").mouseout(function(){
+           $(".hot-case-content").hide();
+        });
+        
+        $(".hot-case-content").mouseover(function(){
+            $(".hot-case-content").show();
+        });
+        $(".hot-case-content").mouseout(function(){
+            $(".hot-case-content").hide();
+        });
+        $(".close-btn").click(function(){
+            $(".hot-case-content").hide();
+        });
+        $(".apply").click(function(){
+            $(".hot-case-content").hide();
+        });
+        
+    });
+    </script>
+
+    <!--製作下拉選單-->
+    <script>
+        $(".dropdown").click(function(){
+            $(".dropdown ul").show();
+        });
+        $(".dropdown ul li a").click(function(e){   
+            e.stopPropagation();   
+            $(".dropdown span").html($(this).text());   
+            $(".dropdown span").css('color','#00aeef');
+            $(".dropdown ul").hide();   
+        });  
+        
+    </script>
+
+    
+
+</body>
+</html>
