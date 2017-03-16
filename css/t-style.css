@@ -1,0 +1,50 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+.portfolio-filter {
+  border: 0;
+  margin: 0;
+}
+.portfolio-filter.style-4 {
+  border-top: 1px solid #c4c4c4 !important;
+  border-bottom: 1px solid #c4c4c4 !important;
+}
+.portfolio-filter.style-4 li {
+  margin-bottom: 0;
+}
+.portfolio-filter.style-4 li a {
+  color: #001c2a;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 0;
+}
+.portfolio-filter.style-4 li a:after {
+  display: none;
+}
+.portfolio-filter.style-4 li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.portfolio-filter.style-4 li a:hover {
+  color: rgba(0, 28, 42, 0.8);
+}
+.portfolio-filter.style-4 li.activeFilter a {
+  color: #00acec !important;
+}
+.portfolio-filter.style-4 li.activeFilter a:after {
+  display: none;
+}
+.portfolio-filter.style-4 li.activeFilter a:before {
+  width: 100%;
+  top: -3%;
+  background-color: #00acec;
+}

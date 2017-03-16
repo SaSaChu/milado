@@ -1,0 +1,71 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+
+// 詳細頁小選單 開始
+
+.portfolio-filter {
+  border: 0;
+  margin:0;
+
+  &.style-4 {
+    border-top: 1px solid rgba(196, 196, 196, 1.00)!important; 
+    border-bottom: 1px solid rgba(196, 196, 196, 1.00)!important; 
+
+    li {
+      margin-bottom: 0;
+
+      a {
+        color: rgba(0, 28, 42, 1.00);
+        padding: 15px 20px;
+        font-size: 18px;
+        border-radius: 0;
+
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: auto;
+          left: 0;
+          width: 0;
+          height: 2px;
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+
+        &:hover {
+          color: rgba(0, 28, 42, .8);
+        }
+      }
+
+      &.activeFilter {
+
+        a {
+          color: rgba(0, 172, 236, 1.00) !important;
+
+          &:after {
+            display: none;
+          }
+
+          &:before {
+            width: 100%;
+            top: -3%;
+            background-color: rgba(0, 172, 236, 1.00);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// 詳細頁小選單 結束
+
+
