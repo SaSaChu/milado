@@ -1,50 +1,241 @@
+@charset "UTF-8";
 /**
  * @author      ZEUS Design - http://www.zeusdesign.com.tw
  * @copyright   Copyright (c) 2016 ZEUS Design
  */
-.portfolio-filter {
-  border: 0;
-  margin: 0;
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+.icon-right-quote:before {
+  content: "\e900";
 }
-.portfolio-filter.style-4 {
-  border-top: 1px solid #c4c4c4 !important;
-  border-bottom: 1px solid #c4c4c4 !important;
+
+.icon-left-quote:before {
+  content: "\e901";
 }
-.portfolio-filter.style-4 li {
-  margin-bottom: 0;
+
+#menu_t {
+  margin-bottom: 30px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  *zoom: 1;
 }
-.portfolio-filter.style-4 li a {
-  color: #001c2a;
-  padding: 15px 20px;
+#menu_t:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+#menu_t > div {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+#menu_t > div:after {
+  position: absolute;
+  right: 0;
+  top: 11px;
+  height: calc(100% - 20px );
+  content: '';
+  margin-left: 0 8px;
+  border-left: 1px solid black;
+}
+#menu_t > div:last-child:after {
+  border-left: 0;
+}
+#menu_t > div:first-child a {
+  padding: 10px 25px;
+  margin: 0 10px 0 0;
+}
+#menu_t > div a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 12px 0 10px;
   font-size: 18px;
-  border-radius: 0;
+  font-weight: 600;
+  color: #001c2a;
+  text-decoration: none;
 }
-.portfolio-filter.style-4 li a:after {
-  display: none;
-}
-.portfolio-filter.style-4 li a:before {
+#menu_t > div a:after {
+  display: inline-block;
   content: '';
   position: absolute;
-  top: 0;
-  bottom: auto;
-  left: 0;
+  left: 50%;
+  top: -2px;
   width: 0;
-  height: 2px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  height: 3px;
+  background-color: #00a5ec;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: left 0.3s, width 0.3s, opacity 0.3s;
+  -o-transition: left 0.3s, width 0.3s, opacity 0.3s;
+  -webkit-transition: left 0.3s, width 0.3s, opacity 0.3s;
+  transition: left 0.3s, width 0.3s, opacity 0.3s;
 }
-.portfolio-filter.style-4 li a:hover {
-  color: rgba(0, 28, 42, 0.8);
+#menu_t > div a:hover, #menu_t > div a.active {
+  color: #00a5ec;
 }
-.portfolio-filter.style-4 li.activeFilter a {
-  color: #00acec !important;
+#menu_t > div a:hover:after, #menu_t > div a.active:after {
+  left: 0;
+  width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
-.portfolio-filter.style-4 li.activeFilter a:after {
+
+.story_t {
+  border-bottom: 3px double #e3e3e3;
+}
+.story_t .videoboxs {
+  *zoom: 1;
+}
+.story_t .videoboxs:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+.story_t .videoboxs .videotype, .story_t .videoboxs .video {
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+.story_t .videoboxs .video {
+  float: right;
+}
+.story_t .videoboxs .videotype {
+  width: 30%;
+}
+.story_t .videoboxs .video {
+  width: calc(100% - 30%);
+}
+.story_t .videoboxs .videotype {
+  display: inline-block;
+  padding: 20px;
+  background-color: #e5e5e5;
+}
+.story_t .videoboxs .videotype span {
+  display: inline-block;
+  font-size: 15px;
+  color: #1a1b1b;
+}
+.story_t .videoboxs .videotype span:before {
+  content: '\e900';
+  color: #00a5ec;
+  font-size: 20px;
+}
+.story_t .videoboxs .videotype span:after {
+  content: '\e900';
+  color: #00a5ec;
+  font-size: 20px;
+}
+.story_t .videoboxs .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.story_t .videoboxs .video iframe, .story_t .videoboxs .video object, .story_t .videoboxs .video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrap.detail {
+  background-color: #f8f8f8;
+}
+.content-wrap .heading-style-01 h2.actor {
+  font-size: 26px;
+  color: #00a5ec;
+  margin-bottom: 10px;
+}
+.content-wrap .heading-style-01 h2.actor:after {
   display: none;
 }
-.portfolio-filter.style-4 li.activeFilter a:before {
-  width: 100%;
-  top: -3%;
-  background-color: #00acec;
+.content-wrap .actor_title {
+  font-size: 13px;
+  color: #3c3c3c;
+}
+.content-wrap .container.clearfix .col_one_third {
+  padding-bottom: 30px;
+}
+.content-wrap .title-style-05-t {
+  position: relative;
+  margin-bottom: 20px;
+}
+.content-wrap .title-style-05-t:after {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: #00a5ec;
+  left: 50%;
+  bottom: -10px;
+  margin-left: -22px;
+}
+.content-wrap .title-style-05-t .actor_name {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #001c2a;
+  height: 0;
+  margin: 0 auto 10px;
+}
+.content-wrap .title-style-05-t .jobname {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #001c2a;
+}
+.content-wrap .title-style-05-t .jobname:before {
+  content: '／';
+}
+.content-wrap .actor_narrate {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
 }
