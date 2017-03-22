@@ -8,8 +8,8 @@ http_path = "/milado"
 fonts_dir = "font"
 fonts_path = "../font"
 
-images_dir = "img"
-images_path = "../img"
+images_dir = "images"
+images_path = "../images"
 
 css_dir = "../css"
 sass_dir = "../scss"

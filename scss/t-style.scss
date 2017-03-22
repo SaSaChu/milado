@@ -5,13 +5,6 @@
 
 @import "_oa";
 
-.icon-right-quote:before {
-  content: "\e900";
-}
-.icon-left-quote:before {
-  content: "\e901";
-}
-
 
 // 詳細頁小選單．開始
 #menu_t {
@@ -89,40 +82,61 @@
 // 詳細頁小選單．結束
 
 
-// 詳細頁故事敘述．開始
+// 故事敘述．開始
 .story_t {
+  display: inline-block;
+  width: 100%;
   border-bottom: 3px double rgba(227, 227, 227, 1.00); 
 
   .videoboxs {
-    @include split-left(30%, '.videotype', '.video');
+    position: relative;
+    background-color: rgba(229, 229, 229, 1.00);
+    margin-bottom: 20px;
+
+    @include range-width(990px) {
+      @include split-left(30%, '.videotype', '.video');
+    }
 
     .videotype {
       display: inline-block;
-      padding: 20px;
-      background-color: rgba(229, 229, 229, 1.00);
 
-      span {
+      .a {
         display: inline-block;
         font-size: 15px;
         color: rgba(26, 27, 27, 1.00);
+        padding: 20px;
 
-        &:before {
-          content:'\e900';
+        .fa-quote-left, .fa-quote-right {
           color: rgba(0, 165, 236, 1.00);
-          font-size: 20px;
         }
 
-        &:after {
-          content: '\e900';
-          color: rgba(0, 165, 236, 1.00);
-          font-size: 20px;
-        }
+      }
+    }
+
+    .b {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: calc(30% - 20px);
+      text-align: right;
+      font-style: italic;
+      color: rgba(0, 28, 42, 1.00);
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 120px;
+        top: 10px;
+        display: inline-block;
+        width: 20%;
+        height: 1px;
+        background-color: rgba(0, 28, 42, 1.00);
       }
     }
 
     .video {
       position: relative;
-      padding-bottom: 56.25%;
+      padding-bottom: 39.25%;
       // padding-top: 30px;
       height: 0;
       overflow: hidden;
@@ -137,15 +151,191 @@
     }
   }
 
+  .story_type_boxs {
+    display: inline-block;
+    width: 100%;
+    padding-top: 20px;
+
+    // @include range-width(960px){
+    //   @include split-left(30%, '.story_left', '.story_right');
+    // }
+
+    //   height: 300px;
+    // };
+
+    @include range-width(990px) {
+      @include split-left(30%, '.story_left', '.story_right');
+    }
+
+    .story_left {
+      font-size: 18px;
+      color: rgba(0, 34, 58, 1.00);
+      font-weight: bolder;
+      padding-right: 25px;
+      font-weight: 500;
+    }
+
+    .story_right {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(102, 102, 102, 1.00);
+      font-weight: 300;
+    }
+
+    + .story_type_boxs {
+      position: relative;
+
+      .story_right {
+        *:before {
+          content: '';
+          position: absolute;
+          top: -20px;
+          left: 0;
+          display: inline-block;
+          width: 100%;
+          height: 1px;
+          border-top: 1px dotted rgba(227, 227, 227, 1.00);
+        }
+
+      }
+    }
+
+  }
+
 }
-// 詳細頁故事敘述．結束
+// 故事敘述．結束
 
 
-// 演員．開始
+// 導演介紹．開始
+.direct_t {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+
+  > p {
+    font-size: 25px;
+    color: rgba(0, 165, 236, 1.00);
+  }
+
+  .direct_boxs {
+    display: inline-block;
+    width: 100%;
+
+    @include range-width(990px) {
+      @include split-left(30%, '.direct_left', '.direct_right');
+    }
+    
+
+    .direct_left {
+      display: inline-block;
+
+      .direct_pic {
+        width: 250px;
+        height: 250px;
+        @include border-radius(3px);
+        overflow: hidden;
+      }
+
+    }
+
+    .direct_right {
+      display: inline-block;
+
+      .fa-check {
+        color: rgba(0, 165, 236, 1.00);
+        padding-right: 10px;
+      }
+
+      span {
+        display: inline-block;
+        width: 100%;
+        margin-top: -2px;
+
+        &:nth-child(1) {
+          color: rgba(147, 147, 147, 1.00);
+          font-size: 13px;
+          
+        }
+        &:nth-child(2) {
+          font-size: 24px;
+          color: rgba(0, 28, 42, 1.00);
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        padding-bottom: 6px;
+        font-size: 15px;
+        font-weight: 300;
+        color: rgba(75, 75, 75, 1.00);
+      }
+
+      .boxs {
+        // margin-top: 30px;
+        display: inline-block;
+        width: 100%;
+        @include clearfix();
+        
+        > div {
+          margin-top: 10px;
+          color: rgba(110, 110, 110, 1.00);
+          float: left;
+          display: inline-block;
+
+          @include range-width(1200px) {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#article {
+  margin-top: 30px;
+  border-top: 1px dashed rgba(224, 224, 224, 1.00);
+  padding-top: 20px;
+  padding-bottom: 55px;
+
+  h4 {
+    font-size: 20px;
+    color: rgba(0, 28, 42, 1.00);
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(60, 60, 60, 1.00);
+  }
+
+  #xxx {
+    margin-top: 20px;
+    @include split-left(350px);
+
+    .l {
+      padding-right: 10px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .r {
+      font-size: 15px;
+      padding-left: 20px;
+    }
+  }
+}
+// 導演介紹．結束
+
+
+
+// 演員介紹．開始
 .content-wrap {
 
   &.detail {
     background-color: rgba(248, 248, 248, 1.00);
+    margin-bottom: 0;
   }
 
   .heading-style-01 h2 {
@@ -217,8 +407,306 @@
     font-size: 13px;
   }
 
+  &.money {
+    background-color: rgba(243, 242, 242, 1.00);
+    text-align: center;
+    margin-top: 0;
+
+  }
 }
 // 演員．結束
 
 
+
+// 財務介紹．開始
+#pages {
+  text-align: center;
+  margin-top: 15px;
+  div {
+    display: inline-block;
+    @include clearfix();
+    
+    a {
+      float: left;
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      @include border-radius(50%);
+      background-color: rgba(221, 220, 220, 1.00);
+
+      + a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+#viedos {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  
+  overflow: hidden;
+  // height: 500px;
+
+  
+  .viedo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    @include transition(left .3s);
+
+    
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        left: 100% * ($i - 1);
+      }
+    }
+    .obj {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      > * {
+        width: 100%;
+      }
+    }
+    .tip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .3);
+      padding: 15px;
+      color: white;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: left;
+      // @include overflow-docx3();
+    } 
+  }
+
+}
+
+#money-viedos {
+  @for $i from 1 through 10 {
+    &.n#{$i} {
+      #viedos {
+        .viedo {
+          @for $j from 1 through 10 {
+            &:nth-child(#{$j}) {
+              @if ($j == $i){
+                display: block;
+                position: relative;
+                .obj {
+                  display: block;
+                  position: relative;
+                }
+              }
+              left: 100% * ($j - $i);
+            }
+          } 
+        }
+      }
+
+      #pages {
+        div {
+          a {
+            @for $j from 1 through 1000 {
+              &:nth-child(#{$j}) {
+                @if ($j == $i){
+                  background-color: rgba(29, 175, 237, 1.00);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .bottom {
+    width: 70%;
+    color: rgba(60, 60, 60, 1.00);
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 30px;
+  }
+}
+// 財務介紹．結束
+
+
+
+
+// 文件下載．開始
+#file {
+  margin-bottom: 100px;
+  background-color: white;
+
+  #boxs {
+  text-align: center;
+
+    > div {
+      
+      display: inline-block;
+      margin: 0 auto;
+      @include clearfix();
+      
+      .box {
+        float: left;
+        display: inline-block;
+        width: 230px;
+        margin: 10px;
+
+        > div {
+          width: 230px;
+          height: 180px;
+          display: inline-block;
+
+          .fa-file-image-o {
+            font-size: 150px;
+            color: rgba(86, 143, 165, 1.00);
+          }
+        }
+
+
+        .title {
+          cursor: pointer;
+          border: 0;
+          background-color: transparent;
+          font-size: 20px;
+          color: rgba(60, 60, 60, 1.00);
+          font-weight: bold;
+          display: inline-block;
+          width: 100%;
+
+          &:hover {
+            color: rgba(0, 165, 236, 1.00);
+          }
+        }
+
+        .desc {
+          font-size: 13px;
+          color: rgba(91, 91, 91, 1.00);
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// 文件下載．結束
+
+
+
+
+// 聯絡我們．開始
+.content-wrap {
+
+  &.contact {
+    background: image-url('index/blue-bg.jpg', false, false);
+
+    .actor_title {
+      position: relative;
+      color: white;
+      line-height: 1.8em;
+      font-size: 18px;
+      font-weight: lighter;
+      padding: 20px;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        left: calc(50% - 100px / 2);
+        display: inline-block;
+        width: 100px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 1.00);
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 15px;
+      @include border-radius(3px);
+      margin-top: 40px !important;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .heading-block {
+      margin-bottom: 5px;
+    }
+  }
+
+  &.address {
+    position: relative;
+    margin: 0 10px;
+    padding: 15px 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 50px / 2);
+      top: 0-30px / 2;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      @include rotate(45deg);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      @include clearfix();
+      z-index: 2;
+
+      > span {
+        float: left;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: rgba(0, 28, 42, 1.00);
+        padding: 5px;
+
+        @include range-width(1200px) {
+          width: calc(100% / 4);
+        }
+
+        .fa-map-marker, .fa-phone, .fa-envelope {
+          color: rgba(0, 165, 237, 1.00);
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  &.maps {
+    height: 300px;
+    padding: 0;
+  }
+
+}
+// 聯絡我們．結束
 
