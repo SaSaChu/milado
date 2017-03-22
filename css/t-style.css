@@ -1,52 +1,7 @@
 @charset "UTF-8";
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
-/**
- * @author      ZEUS Design - http://www.zeusdesign.com.tw
- * @copyright   Copyright (c) 2016 ZEUS Design
- */
+
+
+/*詳細頁小選單．開始*/
 #menu_t {
   margin-bottom: 30px;
   border-top: 1px solid #c4c4c4;
@@ -116,7 +71,10 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
+/*詳細頁小選單．結束*/
 
+
+/*故事敘述．開始*/
 .story_t {
   display: inline-block;
   width: 100%;
@@ -265,7 +223,10 @@
   height: 1px;
   border-top: 1px dotted #e3e3e3;
 }
+/*故事敘述．結束*/
 
+
+/*導演介紹．開始*/
 .direct_t {
   display: inline-block;
   width: 100%;
@@ -383,27 +344,31 @@
 }
 #article #xxx {
   margin-top: 20px;
-  *zoom: 1;
 }
-#article #xxx:after {
-  display: table;
-  content: "";
-  line-height: 0;
-  clear: both;
-}
-#article #xxx .l, #article #xxx .r {
-  float: left;
-  position: relative;
-  display: inline-block;
-}
-#article #xxx .r {
-  float: right;
-}
-#article #xxx .l {
-  width: 350px;
-}
-#article #xxx .r {
-  width: calc(100% - 350px);
+@media screen and (min-width: 990px) {
+  #article #xxx {
+    *zoom: 1;
+  }
+  #article #xxx:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+  }
+  #article #xxx .l, #article #xxx .r {
+    float: left;
+    position: relative;
+    display: inline-block;
+  }
+  #article #xxx .r {
+    float: right;
+  }
+  #article #xxx .l {
+    width: 350px;
+  }
+  #article #xxx .r {
+    width: calc(100% - 350px);
+  }
 }
 #article #xxx .l {
   padding-right: 10px;
@@ -415,7 +380,16 @@
   font-size: 15px;
   padding-left: 20px;
 }
+@media screen and (max-width: 989px) and (min-width: 0) {
+  #article #xxx .r {
+    padding-top: 20px;
+    padding-left: 0;
+  }
+}
+/*導演介紹．結束*/
 
+
+/*演員介紹．開始*/
 .content-wrap.detail {
   background-color: #f8f8f8;
   margin-bottom: 0;
@@ -477,7 +451,11 @@
   text-align: center;
   margin-top: 0;
 }
+/*演員．結束*/
 
+
+
+/*財務介紹．開始*/
 #pages {
   text-align: center;
   margin-top: 15px;
@@ -978,7 +956,10 @@
   font-weight: 300;
   margin-top: 30px;
 }
+/*財務介紹．結束*/
 
+
+ /*文件下載．開始*/
 #forgo4 {
   margin-bottom: 100px;
   background-color: white;
@@ -1036,7 +1017,11 @@
   display: inline-block;
   width: 100%;
 }
+/*文件下載．結束*/
 
+
+
+/*聯絡我們．開始*/
 .content-wrap.contact {
   background: url('/milado/images/index/blue-bg.jpg');
   padding: 70px 0;
@@ -1135,7 +1120,10 @@
   height: 300px;
   padding: 0;
 }
+/*聯絡我們．結束*/
 
+
+/*聯絡我們表單．開始*/
 #contact-ckb {
   position: absolute;
   top: 0;
@@ -1155,7 +1143,7 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 173, 239, 0.8);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transition: top 0.3s, opacity 0.3s;
@@ -1165,10 +1153,16 @@
 }
 #contact-box > label {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   font-size: 50px;
   color: white;
+}
+@media screen and (max-width: 989px) and (min-width: 0) {
+  #contact-box > label {
+    right: 30px;
+    top: 15px;
+  }
 }
 #contact-box > button {
   position: absolute;
@@ -1179,18 +1173,26 @@
   width: 150px;
   height: 45px;
   line-height: 41px;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 28, 42, 0.8);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(0, 28, 42, 0.8);
 }
 #contact-box .container {
   *zoom: 1;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 #contact-box .container:after {
   display: table;
   content: "";
   line-height: 0;
   clear: both;
+}
+@media screen and (max-width: 989px) and (min-width: 0) {
+  #contact-box .container {
+    margin-top: 40px;
+  }
 }
 #contact-box .container input {
   float: left;
@@ -1206,8 +1208,11 @@
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #303030;
+  background-color: white;
+  border: 1px solid #00adee;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 #contact-box .container input[readonly] {
   background-color: #f0f0f0;
@@ -1263,8 +1268,11 @@
   transition: all 0.3s;
   width: 100%;
   margin-top: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #303030;
+  background-color: white;
+  border: 1px solid #00adee;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 #contact-box .container textarea:focus {
   outline: 0;
@@ -1278,3 +1286,9 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+/*聯絡我們表單．結束*/
+
+
+
+
+

@@ -135,12 +135,14 @@
         height: 1px;
         background-color: rgba(0, 28, 42, 1.00);
       }
+
       @include range-width(0, 990px) {
         bottom: auto;
         top: 200px;
         width: 100%;
         padding-right: 10px;
       }
+
     }
 
     .video {
@@ -319,8 +321,14 @@
   }
 
   #xxx {
-    margin-top: 20px;
-    @include split-left(350px);
+    margin-top: 20px;    
+
+    @include range-width(990px) {
+      @include split-left(350px);
+    }
+    // @include range-width(0, 990px) {
+    //   width: 100%;
+    // }
 
     .l {
       padding-right: 10px;
@@ -332,6 +340,11 @@
     .r {
       font-size: 15px;
       padding-left: 20px;
+
+      @include range-width(0, 990px) {
+        padding-top: 20px;
+        padding-left: 0;
+      }
     }
   }
 }
@@ -724,12 +737,13 @@
 }
 // 聯絡我們．結束
 
-
+// 聯絡我們表單．開始
 #contact-ckb {
   position: absolute;
   top: 0;
   left: 0;
   display: none;
+
   &:checked {
     ~ #contact-box {
       top: 0;
@@ -737,6 +751,7 @@
     }
   }
 }
+
 #contact-box {
   position: absolute;
   top: -100%;
@@ -744,17 +759,23 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 173, 239, .8);
   @include opacity(0);
   @include transition(top .3s, opacity .3s);
   
   > label {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
     font-size: 50px;
     color: white;
+
+    @include range-width(0, 990px) { 
+      right: 30px;
+      top: 15px;
+    }
   }
+
   > button {
     position: absolute;
     bottom: 60px;
@@ -764,18 +785,30 @@
     width: 150px;
     height: 45px;
     line-height: 45px - 2px * 2;
-    border: 2px solid white;
-    background-color: rgba(0,0,0,.75);
+    border: 1px solid rgba(0, 28, 42, .8);
+    @include border-radius(3px);
+    background-color: rgba(0, 28, 42, .8);
+
+
   }
 
   .container {
     @include clearfix();
-    padding-top: 40px;
+    padding-top: 80px;
+
+    @include range-width(0, 990px) { 
+      margin-top: 40px;
+    }
+
     input {
       float: left;
+
+
       @include input;
-      background-color: rgba(0,0,0,.5);
-      border: 1px solid rgba(48, 48, 48, 1.00);
+      background-color: white;
+      border: 1px solid rgba(0, 173, 238, 1.00);
+      @include border-radius(3px);
+      
 
       &:focus {
         border: 1px solid rgba(48, 48, 48, 1.00);
@@ -792,16 +825,24 @@
         margin-top: 10px;
       }
     }
+
     textarea {
       float: left;
       @include textarea;
       width: 100%;
       margin-top: 10px;
-      background-color: rgba(0,0,0,.5);
-      border: 1px solid rgba(48, 48, 48, 1.00);
+      background-color: white;
+      border: 1px solid rgba(0, 173, 238, 1.00);
+      @include border-radius(3px);
+
       &:focus {
         @include box-shadow(none);
       }
     }
   }
 }
+// 聯絡我們表單．結束
+
+
+
+
