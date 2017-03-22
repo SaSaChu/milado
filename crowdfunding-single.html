@@ -236,10 +236,10 @@
 
                     <div id='menu_t'>
                         <div><a href="" class='active'>故事介紹</a></div>
-                        <div><a href="">關於導演</a></div>
-                        <div><a href="">演員陣容</a></div>
-                        <div><a href="">投資說明</a></div>
-                        <div><a href="">文件下載</a></div>
+                        <div><a data-forgo='forgo1'>關於導演</a></div>
+                        <div><a data-forgo='forgo2'>演員陣容</a></div>
+                        <div><a data-forgo='forgo3'>投資說明</a></div>
+                        <div><a data-forgo='forgo4'>文件下載</a></div>
                     </div>
                 </div>
                 <!-- 第二區塊-小選單  結束 -->
@@ -284,7 +284,7 @@
                 <!-- 第三區塊-故事敘述  結束 -->
 
                 <!-- 第四區塊-導演介紹  開始 -->
-                <div class='direct_t'>
+                <div class='direct_t' id='forgo1'>
                     <p>關於導演</p>
                     <div class='direct_boxs'>
                         <div class='direct_left'>
@@ -333,7 +333,7 @@
             </div>
 
             <!-- 第五區塊-演員介紹  開始 -->
-            <div class="content-wrap detail">
+            <div class="content-wrap detail" id='forgo2'>
                 <div class="container clearfix">
                     <div class="heading-block heading-style-01">
                         <h2 class='actor'>演員陣容</h2>
@@ -432,7 +432,7 @@
             <!-- 第五區塊-演員介紹  結束 -->
 
             <!-- 第六區塊-財務介紹  開始 -->
-            <div class="content-wrap money n1" id='money-viedos'>
+            <div class="content-wrap money n1" id='forgo3'>
                 <div class="container clearfix">
                     <div class="heading-block heading-style-01">
                         <h2 class='actor'>財務介紹</h2>
@@ -486,7 +486,7 @@
 
 
             <!-- 第七區塊-文件下載  開始 -->
-            <div class="content-wrap money n1" id='file'>
+            <div class="content-wrap money n1" id='forgo4'>
                 <div class="container clearfix">
                     <div class="heading-block heading-style-01">
                         <h2 class='actor'>文件下載</h2>
@@ -524,11 +524,25 @@
 
             <!-- 第八區塊-聯絡我們  開始 -->
             <div class="content-wrap contact">
+                <input type='checkbox' id='contact-ckb' >
+
                 <div class="container clearfix">
                     <div class="heading-block heading-style-01">
                         <span class='actor_title'>我們永遠歡迎大家隨時提出任何關於產品的疑問，或者只是跟我們打聲招呼，<br/>無論如何您都可以透過以下的方式聯絡我們</span>
-                        <a>聯絡我們</a>
+                        <label for='contact-ckb' class='btn'>聯絡我們</label>
                     </div>
+                </div>
+
+                <div id='contact-box'>
+                    <label for='contact-ckb' class="fa fa-times" aria-hidden="true"></label>
+
+                    <div class="container clearfix">
+                        <input placeholder='Name'>
+                        <input placeholder='Email'>
+                        <input placeholder='Tel'>
+                        <textarea placeholder='Say Something'></textarea>
+                    </div>
+                    <button>SEND MAIL</button>
                 </div>
             </div>
 
