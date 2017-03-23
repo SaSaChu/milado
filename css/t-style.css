@@ -154,6 +154,7 @@
 }
 .story_t .videoboxs .videotype {
   display: inline-block;
+  line-height: 1.6;
 }
 .story_t .videoboxs .videotype .a {
   display: inline-block;
@@ -163,7 +164,13 @@
 }
 @media screen and (max-width: 989px) and (min-width: 0) {
   .story_t .videoboxs .videotype .a {
-    padding-bottom: 60px;
+    padding-bottom: 10px 10px 60px 10px;
+  }
+}
+@media screen and (max-width: 1249px) and (min-width: 990px) {
+  .story_t .videoboxs .videotype .a {
+    padding: 10px 0;
+    font-size: 14px;
   }
 }
 .story_t .videoboxs .videotype .a:before, .story_t .videoboxs .videotype .a:after {
@@ -193,10 +200,10 @@
   height: 1px;
   background-color: #001c2a;
 }
-@media screen and (max-width: 989px) and (min-width: 0) {
+@media screen and (max-width: 699px) and (min-width: 0) {
   .story_t .videoboxs .b {
     bottom: auto;
-    top: 200px;
+    top: 220px;
     width: 100%;
     padding-right: 10px;
   }
@@ -207,12 +214,21 @@
   height: 0;
   overflow: hidden;
 }
+@media screen and (max-width: 989px) and (min-width: 0) {
+  .story_t .videoboxs .video {
+    padding-bottom: 56.25%;
+  }
+}
 .story_t .videoboxs .video iframe, .story_t .videoboxs .video object, .story_t .videoboxs .video embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.story_t .videoboxs .video.col-md-8 {
+  padding-left: 0;
+  padding-right: 0;
 }
 .story_t .story_type_boxs {
   display: inline-block;
@@ -249,7 +265,7 @@
   color: #00223a;
   font-weight: bolder;
   padding-right: 25px;
-  font-weight: 500;
+  font-weight: bolder;
 }
 .story_t .story_type_boxs .story_right {
   font-size: 15px;
@@ -320,6 +336,10 @@
   border-radius: 3px;
   overflow: hidden;
 }
+.direct_t .direct_boxs .direct_left.col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
 .direct_t .direct_boxs .direct_right {
   display: inline-block;
 }
@@ -369,6 +389,10 @@
   .direct_t .direct_boxs .direct_right .boxs > div {
     width: 50%;
   }
+}
+.direct_t .direct_boxs .direct_right.col-md-8 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #article {
@@ -444,6 +468,8 @@
   display: none;
 }
 .content-wrap .actor_title {
+  display: inline-block;
+  line-height: 1.8em;
   font-size: 13px;
   color: #3c3c3c;
 }
@@ -1053,7 +1079,7 @@
   }
   #forgo4 #boxs > div .box > div {
     width: 180px;
-    height: 180px;
+    height: 140px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -1062,14 +1088,15 @@
   }
   #forgo4 #boxs > div .box > div {
     width: 230px;
-    height: 180px;
+    height: 140px;
   }
 }
 #forgo4 #boxs > div .box > div {
   display: inline-block;
+  width: 100%;
 }
 #forgo4 #boxs > div .box > div .fa-file-image-o {
-  font-size: 150px;
+  font-size: 120px;
   color: #568fa5;
 }
 #forgo4 #boxs > div .box .title {
@@ -1086,7 +1113,7 @@
   color: #00a5ec;
 }
 #forgo4 #boxs > div .box .desc {
-  font-size: 13px;
+  font-size: 12px;
   color: #5b5b5b;
   display: inline-block;
   width: 100%;
@@ -1097,7 +1124,7 @@
   padding: 70px 0;
   overflow: hidden;
 }
-.content-wrap.contact .actor_title {
+.content-wrap.contact .con_title {
   position: relative;
   color: white;
   line-height: 1.8em;
@@ -1105,7 +1132,7 @@
   font-weight: lighter;
   padding: 50px 0;
 }
-.content-wrap.contact .actor_title:after, .content-wrap.contact .actor_title:before {
+.content-wrap.contact .con_title:after, .content-wrap.contact .con_title:before {
   content: '';
   position: absolute;
   left: calc(50% - 100px / 2);
@@ -1114,17 +1141,17 @@
   height: 2px;
   background-color: white;
 }
-.content-wrap.contact .actor_title:before {
+.content-wrap.contact .con_title:before {
   top: 0;
 }
-.content-wrap.contact .actor_title:after {
+.content-wrap.contact .con_title:after {
   bottom: 0;
 }
-.content-wrap.contact .btn {
+.content-wrap.contact .btn2 {
   display: inline-block;
   border: 2px solid white;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 30px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1133,8 +1160,10 @@
   font-weight: 300;
   letter-spacing: 1px;
 }
-.content-wrap.contact .btn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.content-wrap.contact .btn2:hover {
+  font-weight: 400;
+  color: #03a3e8;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .content-wrap.contact .heading-block {
   margin-bottom: 5px;
