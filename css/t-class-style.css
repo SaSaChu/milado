@@ -316,6 +316,8 @@
 }
 #content .container #items {
   position: relative;
+  display: inline-block;
+  width: 100%;
   *zoom: 1;
 }
 #content .container #items:after {
@@ -328,20 +330,47 @@
   content: '';
   position: absolute;
   top: 32px;
-  left: calc(100% / 7 / 2);
   display: inline-block;
-  width: calc(100% - 100% / 7);
+  left: calc(100% / 8 / 2);
+  width: calc(100% - 100% / 8);
   height: 1px;
   border-top: 1px dashed #e1e2e3;
   z-index: 1;
+}
+@media screen and (max-width: 699px) and (min-width: 0) {
+  #content .container #items:after {
+    left: calc(100% / 4 / 2);
+    width: calc(100% - 100% / 4);
+  }
+}
+@media screen and (max-width: 699px) and (min-width: 0) {
+  #content .container #items:before {
+    content: '';
+    position: absolute;
+    top: 142px;
+    display: inline-block;
+    left: calc(100% / 4 / 2);
+    width: calc(100% - 100% / 4);
+    height: 1px;
+    border-top: 1px dashed #e1e2e3;
+    z-index: 1;
+  }
 }
 #content .container #items .item {
   float: left;
   position: relative;
   display: inline-block;
-  width: calc(100% / 7);
+  width: calc(100% / 8);
   height: 90px;
   z-index: 2;
+}
+@media screen and (max-width: 699px) and (min-width: 0) {
+  #content .container #items .item {
+    width: calc(100% / 4);
+  }
+  #content .container #items .item:nth-child(n + 5) {
+    margin-top: 20px;
+  }
 }
 #content .container #items .item:nth-child(1) {
   background: url('/milado/images/case/icon/step010.png');
@@ -497,6 +526,28 @@
 #content .container #items .item:nth-child(7):hover span, #content .container #items .item:nth-child(7).now span {
   color: #39bff2;
 }
+#content .container #items .item:nth-child(8) {
+  background: url('/milado/images/case/icon/step080.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#content .container #items .item:nth-child(8).ed {
+  background: url('/milado/images/case/icon/step082.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+#content .container #items .item:nth-child(8):hover, #content .container #items .item:nth-child(8).now {
+  background: url('/milado/images/case/icon/step081.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+#content .container #items .item:nth-child(8):hover span, #content .container #items .item:nth-child(8).now span {
+  color: #39bff2;
+}
 #content .container #items .item > div {
   position: absolute;
   bottom: 0;
@@ -545,7 +596,7 @@
   text-align: center;
 }
 #content .container #items .item.now > div {
-  padding-left: 32px;
+  padding-left: 12px;
 }
 #content .container #items .item.now > div div {
   display: inline-block;
@@ -560,6 +611,32 @@
   text-align: left;
   padding-left: 10px;
   color: #39bff2;
+}
+@media screen and (max-width: 599px) and (min-width: 0) {
+  #content .container #items .item.now > div {
+    padding-left: 0;
+  }
+  #content .container #items .item.now > div div {
+    display: none;
+  }
+  #content .container #items .item.now > div span {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 909px) and (min-width: 700px) {
+  #content .container #items .item.now > div {
+    padding-left: 0;
+  }
+  #content .container #items .item.now > div div {
+    display: none;
+  }
+  #content .container #items .item.now > div span {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
 #form {

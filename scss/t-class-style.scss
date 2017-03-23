@@ -350,29 +350,53 @@
     }
     #items {
       position: relative;
+      display: inline-block;
+      width: 100%;
       @include clearfix();
       &:after {
         content: '';
         position: absolute;
         top: 32px;
-        left: calc(100% / 7 / 2);
         display: inline-block;
-        width: calc(100% - 100% / 7);
+        left: calc(100% / 8 / 2);
+        width: calc(100% - 100% / 8);
         height: 1px;
         border-top: 1px dashed rgba(225, 226, 227, 1.00);
         z-index: 1;
+        @include range-width(0, 700px){
+          left: calc(100% / 4 / 2);
+          width: calc(100% - 100% / 4);
+        }
+      }
+      @include range-width(0, 700px){
+        &:before {
+          content: '';
+          position: absolute;
+          top: 142px;
+          display: inline-block;
+          left: calc(100% / 4 / 2);
+          width: calc(100% - 100% / 4);
+          height: 1px;
+          border-top: 1px dashed rgba(225, 226, 227, 1.00);
+          z-index: 1;
+        }
       }
       
       .item {
         float: left;
         position: relative;
         display: inline-block;
-        width: calc(100% / 7);
+        width: calc(100% / 8);
         height: 90px;
-        
         z-index: 2;
+        @include range-width(0, 700px){
+          width: calc(100% / 4);
+          &:nth-child(n + 5) {
+            margin-top: 20px;
+          }
+        };
         
-        @for $i from 1 through 7 {
+        @for $i from 1 through 8 {
           &:nth-child(#{$i}) {
             
             background: image-url('case/icon/step0#{$i}0.png', false, false);
@@ -437,7 +461,7 @@
         }
         &.now {
           > div {
-            padding-left: 32px;
+            padding-left: 12px;
             div {
               display: inline-block;
               width: 20px;
@@ -451,6 +475,28 @@
               text-align: left;
               padding-left: 10px;
               color: rgba(57, 191, 242, 1.00);
+            }
+            @include range-width(0, 600px){
+              padding-left: 0;
+              div {
+                display: none;
+              }
+              span {
+                width: 100%;
+                text-align: center;
+                padding-left: 0;
+              }
+            }
+            @include range-width(700px, 910px){
+              padding-left: 0;
+              div {
+                display: none;
+              }
+              span {
+                width: 100%;
+                text-align: center;
+                padding-left: 0;
+              }
             }
           }
         }
