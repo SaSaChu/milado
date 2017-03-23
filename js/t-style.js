@@ -1,6 +1,10 @@
 
 
 $(function () {
+  $('#adx').click (function () {
+    $('#ad').remove ();
+  });
+
   $('#pages a').click (function (argument) {
     $('#forgo3').attr ('class', 'content-wrap money n' + ($(this).index () + 1));
   });
