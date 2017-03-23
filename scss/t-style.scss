@@ -980,6 +980,22 @@
   border-top: 3px solid rgba(0, 165, 237, 1.00);
   @include opacity(0);
   @include transition(opacity .3s, bottom .3s);
+
+  @include range-width(0, 600px) {
+    height: 205px;
+  }
+
+  #adx {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 16px;
+  }
+
   
 
   &.show {
@@ -1003,23 +1019,42 @@
       overflow: hidden;
       margin: 13px 0;
 
-      @include range-width(990px, 1200px) {
+      @include range-width(0, 1000px) {
         display: none;
       }
     }
 
     .title {
-      width: calc(100% - 200px);
+      width: calc(100% - 105px);
       font-size: 18px;
       color: white;
       margin-top: 20px;
       padding-left: 20px;
+
+      @include range-width(600px, 1000px) { 
+        padding-left: 0;
+      }
+
+      @include range-width(0, 600px) { 
+        font-size: 15px;
+        line-height: 1.4em;
+        width: 100%;
+        padding-left: 0;
+      }
     }
 
     .btn {
-      width: 250px;
+      width: 227px;
       margin-top: 17px;
+      float: right;
       @include clearfix();
+
+
+      @include range-width(0, 600px) { 
+        width: 100%;
+        margin-top: 0;
+        padding: 0; 
+      }
       
       > * {
         display: inline-block;
@@ -1030,6 +1065,10 @@
       div {
         padding-top: 5px;
         width: 70px;
+
+        @include range-width(0, 600px) {
+          display: none;
+        }
       }
 
       a {
@@ -1044,14 +1083,35 @@
         &:hover {
           background-color: rgba(0, 180, 251, 1.00);
         }
+
+        @include range-width(0, 600px) { 
+          width: 100%;
+          padding: 0;
+          margin: 0;
+        }
       }
     }
 
     .info {
-      width: calc(100% - 200px - 250px);
+      width: calc(100% - 105px - 227px);
       @include clearfix();
       padding-left: 20px;
+
+      @include range-width(950px, 1000px) { 
+        width: 70%;
+        padding-left: 0;
+      }
       
+      @include range-width(0, 950px) { 
+        width: calc(100% - 227px);
+        padding-left: 0;
+      }
+
+      @include range-width(0, 600px) {
+        width: 100%;
+        display: inline-block;
+      }
+
       > div {
         position: relative;
         float: left;
@@ -1061,6 +1121,11 @@
           width: calc(100% - 120px * 3);
           color: white;
           padding-right: 20px;
+
+          @include range-width(0, 600px) {
+            width: 100%;
+            padding-right: 10px;
+          }
 
           .ss {
             position: absolute;
@@ -1073,6 +1138,26 @@
 
         .skills {
           padding-top: 27px !important;
+        }
+
+        &:nth-child(1) {
+            @include range-width(600px, 950px) {
+              width: 50%;
+            }
+
+            @include range-width(0, 600px) {
+              width: 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            @include range-width(600px, 950px) {
+              width: 50%;
+            }
+
+            @include range-width(0, 600px) {
+              display: none;
+            }
         }
         
         &:nth-child(2), &:nth-child(3), &:nth-child(4) {
@@ -1106,6 +1191,12 @@
               font-weight: 600;
               color: rgba(0, 165, 237, 1.00);
             }
+          }
+        }
+
+        &:nth-child(3), &:nth-child(4) {
+          @include range-width(0, 950px) {
+            display: none;
           }
         }
       }
