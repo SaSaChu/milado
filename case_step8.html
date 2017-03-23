@@ -21,6 +21,7 @@
 
     <!-- style -->
     <link rel="stylesheet" href="http://www.jqueryscript.net/demo/Nice-Clean-File-Input-Plugin-With-jQuery-Bootstrap-3-Bootstrap-Fileinput/css/fileinput.css" type="text/css" />
+    <link rel="stylesheet" href="css/components/bs-select.css" type="text/css" />
     <link rel="stylesheet" href="css/filmulus-style.css" type="text/css" />
     <link rel="stylesheet" href="css/t-class-style.css" type="text/css" />
   <title>Filmulus</title>    
@@ -113,51 +114,51 @@
               <h1>嗨，募資案的名稱</h1>
               <p>請填寫您的專案基本資料，若有提案問題可參閱 <a href="">常見問題</a></p>
             </header>
-
+            
             <div id='items'>
-              <a href='case_step1.html' class='item now'>
+              <a href='case_step1.html' class='item ed'>
                 <div>
                   <div>01</div>
                   <span>故事介紹</span>
                 </div>
               </a>
-              <a href='case_step2.html' class='item'>
+              <a href='case_step2.html' class='item ed'>
                 <div>
                   <div>02</div>
                   <span>導演介紹</span>
                 </div>
               </a>
-              <a href='case_step3.html' class='item'>
+              <a href='case_step3.html' class='item ed'>
                 <div>
                   <div>03</div>
                   <span>演員介紹</span>
                 </div>
               </a>
-              <a href='case_step4.html' class='item'>
+              <a href='case_step4.html' class='item ed'>
                 <div>
                   <div>04</div>
                   <span>財務說明</span>
                 </div>
               </a>
-              <a href='case_step5.html' class='item'>
+              <a href='case_step5.html' class='item ed'>
                 <div>
                   <div>05</div>
                   <span>文件下載</span>
                 </div>
               </a>
-              <a href='case_step6.html' class='item'>
+              <a href='case_step6.html' class='item ed'>
                 <div>
                   <div>06</div>
                   <span>公司介紹</span>
                 </div>
               </a>
-              <a href='case_step7.html' class='item'>
+              <a href='case_step7.html' class='item ed'>
                 <div>
                   <div>07</div>
                   <span>募資目標</span>
                 </div>
               </a>
-              <a href='case_step8.html' class='item'>
+              <a href='case_step8.html' class='item now'>
                 <div>
                   <div>08</div>
                   <span>填寫完成</span>
@@ -171,117 +172,77 @@
 
       <!-- 輸入名稱 開始 -->
       <div class="container clearfix">
-          <div class='area'>
-            <div class='title'>故事封面照</div>
-            <div class="form-group">
-              <div class="file-input file-input-new"><input type="hidden"><div class="file-preview ">
-                 <div class="file-preview-status text-center text-success"></div>
-                 <div class="close fileinput-remove text-right">×</div>
-                 <div class="file-preview-thumbnails"></div>
-                 <div class="clearfix"></div></div>
-              <div class="input-group ">
-                 <div class="form-control file-caption ">
-                 <span class="glyphicon glyphicon-file"></span> <span class="file-caption-name"></span>
-              </div>
-                 <div class="input-group-btn">
-                     <button type="button" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-ban-circle"></i> Remove</button>
-                     <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-upload"></i> 上傳</button>
-                     <div class="btn btn-primary btn-file"> <i class="fa fa-folder-open"></i> &nbsp;瀏覽 <input id="file-1" type="file" class="file" multiple="true" data-preview-file-type="any"></div>
-                 </div>
-              </div></div>
-              </div>
+        <!-- <div class='area'>
+          <div class='title'>募資類別</div>
+          <div class='sboxs'>
+            <select class="selectpicker">
+              <option>Mustard</option>
+              <option>Ketchup</option>
+              <option>Relish</option>
+            </select>
           </div>
-          
-          <div class='area'>
-            <div class='title'>前導文</div>
-            <input type='text' class='ue' placeholder='請在此欄位輸入故事大綱前導文的一段話，字數限制30字。' />
-          </div>
-          
-          <div class='area'>
-            <div class='title'>故事大綱</div>
-            <textarea class='ue' placeholder='請在此欄位輸入故事大綱說明文，字數限制300字。'></textarea>
-          </div>
-          
-          <div class='area'>
-            <div class='title'>故事影片</div>
-            <div class="form-group">
-              <div class="file-input file-input-new"><input type="hidden"><div class="file-preview ">
-                 <div class="file-preview-status text-center text-success"></div>
-                 <div class="close fileinput-remove text-right">×</div>
-                 <div class="file-preview-thumbnails"></div>
-                 <div class="clearfix"></div></div>
-              <div class="input-group ">
-                 <div class="form-control file-caption ">
-                 <span class="glyphicon glyphicon-file"></span> <span class="file-caption-name"></span>
-              </div>
-                 <div class="input-group-btn">
-                     <button type="button" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-ban-circle"></i> Remove</button>
-                     <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-upload"></i> 上傳</button>
-                     <div class="btn btn-primary btn-file"> <i class="fa fa-folder-open"></i> &nbsp;瀏覽 <input id="file-1" type="file" class="file" multiple="true" data-preview-file-type="any"></div>
-                 </div>
-              </div></div>
-              </div>
-          </div>
+        </div>
 
-          <div class='area'>
-            <div class='title'>影片敘述文</div>
-            <textarea class='ue' placeholder='請在此欄位輸入故事大綱說明文，字數限制300字。'></textarea>
+        <div class='area'>
+          <div class='title'>募資時間</div>
+          <div class='roww'>
+           <label class='checkbox'>
+              <input type='checkbox'>
+              <span class='fa fa-check'></span> 
+            </label>
+
+            <div>選擇天數</div>
+            <input class='ue' placeholder='選擇天數'>
           </div>
+          <div class='roww'>
+            <label class='checkbox'>
+              <input type='checkbox'>
+              <span class='fa fa-check'></span> 
+            </label>
 
-          <div class='area'>
-            <div class='title'>故事介紹文</div>
-            <textarea class='ue' placeholder=''></textarea>
-          </div>
+            <div>選擇日期</div>
 
-          <!-- 
-          <div class='block'>
-            <header>
-              <div class='l'>
-                <span>01</span>
-                <span>財務1</span>
-              </div>
-              <div class='r'>
-                <a href="" class='fa fa-trash'>刪除</a>
-              </div>
-            </header>
 
-            <div class='area'>
-              <div class='title'>故事封面照</div>
-              <div class="form-group">
-                <div class="file-input file-input-new"><input type="hidden"><div class="file-preview ">
-                   <div class="file-preview-status text-center text-success"></div>
-                   <div class="close fileinput-remove text-right">×</div>
-                   <div class="file-preview-thumbnails"></div>
-                   <div class="clearfix"></div></div>
-                <div class="input-group ">
-                   <div class="form-control file-caption ">
-                   <span class="glyphicon glyphicon-file"></span> <span class="file-caption-name"></span>
-                </div>
-                   <div class="input-group-btn">
-                       <button type="button" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-ban-circle"></i> Remove</button>
-                       <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-upload"></i> 上傳</button>
-                       <div class="btn btn-primary btn-file"> <i class="fa fa-folder-open"></i> &nbsp;瀏覽 <input id="file-1" type="file" class="file" multiple="true" data-preview-file-type="any"></div>
-                   </div>
-                </div></div>
-                </div>
+            <div class="input-group">
+              <input type="text" value="" class="sm-form-control tleft past-enabled ue" placeholder="MM/DD/YYYY">
+              <span class="input-group-addon" style="padding: 9px 12px;">
+                <i class="icon-calendar2"></i>
+              </span>
             </div>
-            
-            <div class='area'>
-              <div class='title'>故事封面照</div>
-              <input type='text' placeholder='dddd' />
-            </div>
-            
-            <div class='area'>
-              <div class='title'>故事大綱</div>
-              <textarea placeholder='dddd'></textarea>
-            </div>
-          </div> -->
 
-          <div class='btns'>
-            <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen b1">儲存</a>
-            <a href="case_step2.html" class="button button-3d button-xlarge button-rounded button-gray b2">下一步</a>
-            
           </div>
+        </div>
+
+
+        <div class='area'>
+          <div class='title'>募資目標</div>
+          <div class='sboxs'>
+            <select class="selectpicker">
+              <option>US 6000</option>
+              <option>US 3000</option>
+              <option>US 2000</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='area'>
+          <div class='title'>投資週期</div>
+          <div class='sboxs'>
+            <select class="selectpicker">
+              <option>3年</option>
+              <option>5年</option>
+              <option>8年</option>
+            </select>
+          </div>
+        </div> -->
+
+
+
+        <!-- <div class='btns'>
+          <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen b1">儲存</a>
+          <a href="case_step8.html" class="button button-3d button-xlarge button-rounded button-gray b2">下一步</a>
+          <a href="case_step6.html" class="button button-3d button-xlarge button-rounded button-gray b3">上一步</a>
+        </div> -->
       </div>
 
     </section>
@@ -320,12 +281,24 @@
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
 
+  
+  <script type="text/javascript" src="js/components/moment.js"></script>
+  <script type="text/javascript" src="js/datepicker.js"></script>
+  <script type="text/javascript" src="js/components/timepicker.js"></script>
+  <script type="text/javascript" src="js/components/daterangepicker.js"></script>
+  <script type="text/javascript" src="js/components/bs-select.js"></script>
   <!-- Footer Scripts
   ============================================= -->
   <script type="text/javascript" src="js/functions.js"></script>
-    
-    
 
+    
+  <script type="text/javascript">
+    $(function() {
+      $('.past-enabled').datepicker({
+        autoclose: true,
+      });
+    });
+  </script>
 
     
 

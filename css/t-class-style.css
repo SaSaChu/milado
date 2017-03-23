@@ -319,11 +319,11 @@
 }
 .ctop_boxs .ctop_right {
   display: inline-block;
-  padding: 10px 0;
+  margin: 8px 0;
 }
 .ctop_boxs .ctop_right a {
   text-align: center;
-  padding: 5px;
+  padding: 0 10px;
   display: inline-block;
   width: 100%;
   border: 2px solid white;
@@ -338,8 +338,11 @@
 }
 .ctop_boxs .ctop_right a .fa-eye {
   display: inline;
-  font-size: 30px;
+  font-size: 24px;
   padding-right: 10px;
+}
+.ctop_boxs .ctop_right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .ctop_boxs .ctop_left {
   display: inline-block;
@@ -384,30 +387,37 @@
 #content .container header {
   display: inline-block;
   width: 100%;
+  padding: 70px 0 55px 0;
   text-align: center;
 }
 #content .container header h1 {
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #001c2a;
 }
 #content .container header h1 + p {
   display: inline-block;
   width: 100%;
   margin: 20px 0;
+  font-size: 16px;
+  color: #68777e;
+  font-weight: 400;
 }
 #content .container header h1:after {
   position: absolute;
   content: '';
   bottom: -20px;
-  left: calc(50% - 100px / 2);
+  left: calc(50% - 75px / 2);
   height: 2px;
   background-color: #00a3e5;
-  width: 100px;
+  width: 75px;
 }
 #content .container #items {
   position: relative;
   display: inline-block;
   width: 100%;
+  padding-bottom: 35px;
   *zoom: 1;
 }
 #content .container #items:after {
@@ -796,14 +806,19 @@
   line-height: 35px;
 }
 #form .container .block header .l > span + span {
-  margin-left: 5px;
+  padding-top: 2px;
+  margin-left: 8px;
   font-size: 18px;
 }
 #form .container .block header .l > span:first-child {
   position: relative;
-  padding: 2px 5px;
+  font-size: 10px;
+  padding: 3px 5px;
   color: white;
   background-color: #6a6b6c;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 #form .container .block header .l > span:first-child:after {
   content: '';
@@ -820,19 +835,23 @@
   transform: rotate(45deg);
 }
 #form .container .block header .r {
+  padding-top: 5px;
   text-align: right;
 }
 #form .container .block header .r a {
   color: #e08187;
   border: 1px solid #e08187;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  padding: 3px;
-  font-size: 18px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 13px;
 }
 #form .container .block header .r a:before {
   margin-right: 5px;
+}
+#form .container .block header .r a:hover {
+  background-color: rgba(224, 129, 135, 0.2);
 }
 #form .container .new {
   width: 100%;
@@ -877,20 +896,46 @@
     float: left;
   }
 }
+#form .container .button-dirtygreen {
+  background-color: #00a5ed;
+}
+#form .container .button-dirtygreen:hover {
+  background-color: #0092d1 !important;
+}
+#form .container .button-gray {
+  background-color: #e4e4e4;
+}
+#form .container .button-gray:hover {
+  background-color: #babcbc !important;
+}
+#form .container .button-green {
+  background-color: #7ac3b5;
+}
+#form .container .button-green:hover {
+  background-color: #82d4c6 !important;
+}
+#form .container .ue {
+  font-weight: 300;
+}
 #form .container .area {
   border: 1px solid #f0f1f2;
-  background-color: #f7f7f4;
+  background-color: #f8f6f4;
   padding: 20px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 #form .container .area + .area {
   margin-top: 25px;
 }
 #form .container .area .title {
+  padding-top: 15px;
+  font-size: 16px;
   font-weight: bold;
-  color: #4d4d4c;
+  color: #3c3c3c;
+}
+#form .container .area .title:first-child {
+  padding-top: 0;
 }
 #form .container .area .form-group {
   margin-top: 10px;
@@ -990,7 +1035,8 @@
 #footer.my-footer {
   background-color: white !important;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 25px 0;
+  border-top: 1px solid #dddddd;
 }
 #footer.my-footer .top, #footer.my-footer .bottom {
   display: inline-block;
@@ -1011,10 +1057,13 @@
   position: relative;
   float: left;
   display: inline-block;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 40px;
   color: #50504f;
   font-size: 13px;
+}
+#footer.my-footer .top > div a:hover {
+  color: #00a5ed;
 }
 #footer.my-footer .top > div a + a {
   margin-left: 20px;
