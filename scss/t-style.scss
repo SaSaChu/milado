@@ -931,6 +931,7 @@
 
 
 
+// 底部fix．開始
 #tags {
   @include range-width(990px) {
     &.fix {
@@ -969,14 +970,14 @@
 
 #ad {
   position: fixed;
-  bottom: -200px;
+  bottom: -135px;
   left: 0;
   display: inline-block;
   width: 100%;
-  height: 200px;
+  height: 135px;
   background-color: rgba(0,0,0, .800);
   z-index: 9999999 !important;
-  border-top: 5px solid rgba(0, 165, 237, 1.00);
+  border-top: 3px solid rgba(0, 165, 237, 1.00);
   @include opacity(0);
   @include transition(opacity .3s, bottom .3s);
   
@@ -992,11 +993,21 @@
       display: inline-block;
       float: left;
     }
+
     .avatar {
-      width: 200px;
-      height: 200px;
-      padding: 20px;
+      display: inline-block;
+      width: 105px;
+      height: 105px;
+      @include border-radius(3px);
+      border: 2px solid white;
+      overflow: hidden;
+      margin: 13px 0;
+
+      @include range-width(990px, 1200px) {
+        display: none;
+      }
     }
+
     .title {
       width: calc(100% - 200px);
       font-size: 18px;
@@ -1007,7 +1018,7 @@
 
     .btn {
       width: 250px;
-      margin-top: 60px;
+      margin-top: 17px;
       @include clearfix();
       
       > * {
@@ -1015,15 +1026,24 @@
         float: right;
         color: white;
       }
+
       div {
-        width: 90px;
+        padding-top: 5px;
+        width: 70px;
       }
+
       a {
+        font-size: 16px;
+        font-weight: 600;
         width: 130px;
         height: 45px;
         line-height: 45px;
         background-color: rgba(0, 165, 237, 1.00);
         @include border-radius(3px);
+
+        &:hover {
+          background-color: rgba(0, 180, 251, 1.00);
+        }
       }
     }
 
@@ -1033,22 +1053,33 @@
       padding-left: 20px;
       
       > div {
+        position: relative;
         float: left;
-        margin-top: 50px;
+        margin-top: 20px;
 
         &:nth-child(1) {
           width: calc(100% - 120px * 3);
           color: white;
           padding-right: 20px;
+
           .ss {
+            position: absolute;
+            top:0;
+            left: 0;
+            font-size: 13px;
             font-weight: 300;
           }
+        }
+
+        .skills {
+          padding-top: 27px !important;
         }
         
         &:nth-child(2), &:nth-child(3), &:nth-child(4) {
           width: 120px;
           padding-left: 15px;
           position: relative;
+
           &:before {
             content: '';
             position: absolute;
@@ -1060,14 +1091,19 @@
             background-color: rgba(101, 101, 101, 1.00);
           }
           
-          margin-top: 65px;
-          >span {
+          margin-top: 27px;
+
+          > span {
             display: inline-block;
             width: 100%;
             text-align: left;
             color: white;
+            font-size: 13px;
+            font-weight: 300;
 
             &:nth-child(2) {
+              font-size: 18px;
+              font-weight: 600;
               color: rgba(0, 165, 237, 1.00);
             }
           }
@@ -1076,3 +1112,8 @@
     }
   }
 }
+
+// 底部fix．結束
+
+
+
