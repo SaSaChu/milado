@@ -205,27 +205,36 @@
 .ctop_boxs {
   width: 100%;
   padding: 10px 0;
-  *zoom: 1;
 }
-.ctop_boxs:after {
-  display: table;
-  content: "";
-  line-height: 0;
-  clear: both;
+@media screen and (max-width: 499px) and (min-width: 0) {
+  .ctop_boxs .ctop_right, .ctop_boxs .ctop_left {
+    width: 100%;
+  }
 }
-.ctop_boxs .ctop_left, .ctop_boxs .ctop_right {
-  float: left;
-  position: relative;
-  display: inline-block;
-}
-.ctop_boxs .ctop_right {
-  float: right;
-}
-.ctop_boxs .ctop_left {
-  width: calc(100% - 15%);
-}
-.ctop_boxs .ctop_right {
-  width: 15%;
+@media screen and (min-width: 500px) {
+  .ctop_boxs {
+    *zoom: 1;
+  }
+  .ctop_boxs:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+  }
+  .ctop_boxs .ctop_left, .ctop_boxs .ctop_right {
+    float: left;
+    position: relative;
+    display: inline-block;
+  }
+  .ctop_boxs .ctop_right {
+    float: right;
+  }
+  .ctop_boxs .ctop_left {
+    width: calc(100% - 150px);
+  }
+  .ctop_boxs .ctop_right {
+    width: 150px;
+  }
 }
 .ctop_boxs .ctop_right {
   display: inline-block;
@@ -846,4 +855,59 @@
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+#footer {
+  background-color: white !important;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#footer .top, #footer .bottom {
+  display: inline-block;
+  width: 100%;
+}
+#footer .top > div {
+  display: inline-block;
+  margin: 0 auto;
+  *zoom: 1;
+}
+#footer .top > div:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+#footer .top > div a {
+  position: relative;
+  float: left;
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  color: #50504f;
+  font-size: 13px;
+}
+#footer .top > div a + a {
+  margin-left: 20px;
+}
+@media screen and (max-width: 439px) and (min-width: 0) {
+  #footer .top > div a + a {
+    margin-left: 10px;
+  }
+}
+#footer .top > div a + a:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 15px;
+  width: 1px;
+  height: calc(100% - 15px * 2);
+  background-color: rgba(39, 40, 34, 0.2);
+}
+@media screen and (max-width: 439px) and (min-width: 0) {
+  #footer .top > div a + a:before {
+    left: -5px;
+  }
+}
+#footer .bottom {
+  font-size: 13px;
 }
