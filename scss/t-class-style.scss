@@ -1,0 +1,586 @@
+@import "_oa";
+
+// 表頭banner．開始
+#page-title {
+  &.casebannerimg{
+    background: url(../images/case/cbanner01.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+.container {
+
+  .casetitle {
+    font-size: 30px;
+    color: white; 
+    padding-bottom: 10px; 
+  }
+
+  .casesmaill {
+    font-size: 13px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+    a {
+      padding: 0 5px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 200;
+      letter-spacing: 1px;
+      color: rgba(0, 165, 236, 1.00);
+      text-decoration: underline !important; 
+
+      &:hover {
+        text-decoration: none !important;
+      }   
+    }
+  }
+  
+
+
+}
+// 表頭banner．結束
+
+
+// 我的募資案首頁．開始
+.case_index_boxs {
+  margin:0 auto;
+  width: 450px;
+  padding: 80px 0;
+
+  .case_name_title {
+    padding-bottom: 40px;
+    font-size: 28px;
+    color: rgba(0, 28, 42, 1.00);
+    font-weight: bolder;
+  }
+
+  .case_name {
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 165, 236, 1.00);
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(145, 151, 154, 1.00);
+    font-weight: 200;
+  }
+
+  .sboxs {
+    position: relative;
+    display: inline-block;
+    margin: 25px 0 10px 0;
+    width: 100% !important;
+    height: 40px;
+    @include border-radius(3px); 
+    // select {
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: white;
+    //   border: 1px solid rgba(189, 189, 189, 1.00);
+      
+    //   -webkit-appearance: none;
+    //      -moz-appearance: none;
+    //           appearance: none;
+
+    //   option {
+    //     padding-left: 5px;
+    //   }
+    // }
+    .fa-angle-down {
+      position: absolute;
+      right: 10px;
+      top: 4px;
+      font-size: 24px;
+      color: rgba(3, 163, 232, 1.00);
+    }
+  }
+
+  p {
+    font-size: 12px;
+    color: rgba(168, 167, 166, 1.00);
+    font-weight: 200;
+  }
+
+  .checkboxs {
+    display: inline-block;
+    padding: 40px 0;
+    @include clearfix();
+    
+    .checkbox {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      float: left;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid rgba(189, 189, 189, 1.00);
+      > * {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      input {
+        @include opacity(0);
+        z-index: 1;
+        &:checked {
+          + span {
+            @include opacity(1);
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 20px;
+        text-align: center;
+        z-index: 2;
+        color: rgba(0, 165, 237, 1.00);
+        @include opacity(0);
+        @include transition(opacity .3s);
+        
+      }
+    }
+
+    .yestype {
+      padding-left: 10px;
+      display: inline-block;
+      float: left;
+      font-size: 13px;
+      color: rgba(168, 167, 166, 1.00);
+      font-weight: 200;
+
+      a {
+        padding-left: 5px;
+        cursor: pointer;
+        font-size: 13px;
+        color: rgba(0, 165, 237, 1.00) !important;
+        text-decoration: none;
+        font-weight: 200;
+
+        &:hover {
+          font-weight: 200;
+          color: rgba(0, 165, 237, 1.00) !important;
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+
+  .button-dirtygreen {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(0, 165, 237, 1.00);
+
+    &:hover {
+      background-color: rgba(0, 144, 204, 1.00) !important;
+    }
+  }
+}
+// 我的募資案首頁．結束
+
+
+
+
+
+// 內頁header．開始
+
+#page-title {
+  &.caseimg {
+    padding: 10px;
+    background: url(../images/index/blue-bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+  }
+}
+
+.ctop_boxs {
+  width: 100%;
+  padding: 10px 0;
+
+  @include split-right(15%, '.ctop_left', '.ctop_right');
+
+  .ctop_right {
+    display: inline-block;
+    padding: 10px 0;
+
+    a {     
+      text-align: center;
+      padding: 5px;
+      display: inline-block;
+      width: 100%;
+      border: 2px solid white;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 47px;
+      color: white;
+      font-weight: bolder;
+      @include border-radius(3px);
+
+      .fa-eye {
+        display: inline;
+        font-size: 30px;
+        padding-right: 10px;
+
+        // padding-top: 5px;
+      }
+    }
+  }
+
+  .ctop_left {
+    display: inline-block;
+
+    @include clearfix();
+    
+    .ctoptile {
+      text-align: left;
+      letter-spacing: 5px;
+      font-size: 30px; 
+      color:white;
+      font-weight: bolder;
+    }
+
+    .ctop_tag {
+
+      > div {
+        display: inline-block;
+        float: left;
+        font-size: 13px;
+        color: white;
+        font-weight: 200;
+
+        &:after {
+          padding: 0 5px;
+          content: '>';
+        }
+
+        &:last-child {
+          &:after {
+            content: '';
+          }
+        }
+
+        a {
+          font-size: 13px;
+          color: white;
+          font-weight: 200;
+
+          &:hover {
+            color: rgba(255, 255, 255, .8);
+          }
+        }
+
+      }
+    }
+  }
+}
+
+// 內頁header．結束
+
+
+
+// 第一步驟．開始
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#content {
+  
+  
+  .container {
+    
+    header {
+      display: inline-block;
+      width: 100%;
+      
+      text-align: center;
+      h1 {
+        position: relative;
+        font-size: 20px;
+        + p {
+          display: inline-block;
+          width: 100%;
+          margin: 20px 0;
+        }
+        
+        &:after {
+          position: absolute;
+          content: '';
+          bottom: -20px;
+          left: calc(50% - 100px / 2);
+          height: 2px;
+          background-color: rgba(0, 163, 229, 1.00);
+          width: 100px;
+        }
+      }
+    }
+    #items {
+      position: relative;
+      @include clearfix();
+      &:after {
+        content: '';
+        position: absolute;
+        top: 32px;
+        left: calc(100% / 7 / 2);
+        display: inline-block;
+        width: calc(100% - 100% / 7);
+        height: 1px;
+        border-top: 1px dashed rgba(225, 226, 227, 1.00);
+        z-index: 1;
+      }
+      
+      .item {
+        float: left;
+        position: relative;
+        display: inline-block;
+        width: calc(100% / 7);
+        height: 90px;
+        
+        z-index: 2;
+        
+        @for $i from 1 through 7 {
+          &:nth-child(#{$i}) {
+            
+            background: image-url('case/icon/step0#{$i}0.png', false, false);
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            @include transition(all .3s);
+            
+            &.ed {
+              background: image-url('case/icon/step0#{$i}2.png', false, false);
+              background-position: 50% 0;
+              background-repeat: no-repeat;
+            }
+            &:hover, &.now {
+              background: image-url('case/icon/step0#{$i}1.png', false, false);
+              background-position: 50% 0;
+              background-repeat: no-repeat;
+              span {
+
+                color: rgba(57, 191, 242, 1.00);
+              }
+            }
+          }
+        }
+
+        > div {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          width: 100%;
+          @include clearfix();
+          
+          > * {
+            display: inline-block;
+            float: left;
+          }
+          div {
+            position: relative;
+            display: none;
+            text-align: center;
+            background-color: rgba(57, 191, 242, 1.00);
+            @include border-radius(2px);
+            color: white;
+            font-size: 10px;
+            
+            &:after {
+              content: '';
+              position: absolute;
+              top: calc(50% - 7px / 2);
+              right: -3px;
+              display: inline-block;
+              width: 7px;
+              height: 7px;
+              background-color: rgba(57, 191, 242, 1.00);
+              @include rotate(45deg);
+            }
+          }
+          span {
+            width: 100%;
+            text-align: center;
+          }
+        }
+        &.now {
+          > div {
+            padding-left: 32px;
+            div {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+            }
+            span {
+              width: calc(100% - 20px);
+              height: 20px;
+              line-height: 20px;
+              text-align: left;
+              padding-left: 10px;
+              color: rgba(57, 191, 242, 1.00);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#form {
+  margin-top: 35px;
+  .container {
+    position: relative;
+    padding: 0 160px;
+    @include range-width(0, 640px) {
+      padding: 0 10px;
+    }
+    @include range-width(640px, 990px) {
+      padding: 0 60px;
+    }
+    padding-bottom: 40px;
+    border: 1px solid rgba(255, 0, 0, .3);
+
+    .block {
+      display: inline-block;
+      width: 100%;
+
+
+      header {
+        display: inline-block;
+        width: 100%;
+        margin-top: 35px;
+        margin-bottom: 10px;
+        @include split-right(50%);
+        > * {
+        }
+        .l {
+          @include clearfix();
+          > span {
+            height: 35px;
+            line-height: 35px;
+
+            + span {
+              margin-left: 5px;
+              font-size: 18px;
+            }
+            &:first-child {
+
+              position: relative;
+              padding: 2px 5px;
+              color: white;
+              background-color: rgba(106, 107, 108, 1.00);
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: calc(50% - 7px / 2);
+                right: -3px;
+                display: inline-block;
+                width: 7px;
+                height: 7px;
+                background-color: rgba(106, 107, 108, 1.00);
+                @include rotate(45deg);
+              }
+            }
+          }
+        }
+        .r {
+          text-align: right;
+          a {
+            color: rgba(224, 129, 135, 1.00);
+            border: 1px solid rgba(224, 129, 135, 1.00);
+            @include border-radius(2px);
+            padding: 3px;
+            font-size: 18px;
+            &:before {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .btns {
+      position: relative;
+      margin-top: 30px;
+      padding: 20px 0;
+      text-align: center;
+      @include clearfix();
+      
+      > * {
+        display: inline-block;
+        width: 130px;
+        text-align: center;
+      }
+      .b1 {
+        margin: 0 auto;
+      }
+      .b2 {
+        float: right;
+      }
+      .b3 {
+        float: left;
+      }
+    }
+    .area {
+      border: 1px solid rgba(240, 241, 242, 1.00);
+      background-color: rgba(247, 247, 244, 1.00);
+      padding: 20px;
+      @include border-radius(2px);
+      
+      + .area {
+        margin-top: 25px;
+      }
+
+      .title {
+        font-weight: bold;
+        color: rgba(77, 77, 76, 1.00);
+      }
+      .form-group {
+        margin-top: 10px;
+      }
+      input {
+        @include input;
+        width: 100%;
+        margin-top: 10px;
+      }
+      textarea {
+        @include textarea;
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
