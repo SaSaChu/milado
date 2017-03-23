@@ -5,6 +5,64 @@
   &.casebannerimg{
     background: url(../images/case/cbanner01.jpg) 50% 50% no-repeat;
     background-size: cover;
+    padding-top: 0;
+
+    .container {
+      position: relative;
+      height: 260px;
+      > div {
+        position: absolute;
+        top: 140px;
+        left: calc(50% - 400px / 2);
+        display: inline-block;
+        width: 400px;
+        @include range-width(0, 450px){
+          top: 115px;
+          p {
+            font-size: 14px !important;
+          }
+        };
+        h1 {
+          color: white !important;
+          &:after {
+            display: none !important;
+          }
+        }
+        p {
+          margin-top: 10px;
+          font-size: 18px;
+          color: white !important;
+
+          a {
+            color: rgba(9, 165, 227, 1.00);
+          }
+        }
+      }
+      nav {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display: inline-block;
+        @include clearfix();
+        height: 35px;
+        line-height: 35px;
+
+        > * {
+          float: left;
+          display: inline-block;
+        }
+        i {
+          width: 20px;
+          color: white;
+        }
+        a {
+          color: rgba(9, 165, 227, 1.00);
+          &:not(:last-child) {
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -46,7 +104,9 @@
 // 我的募資案首頁．開始
 .case_index_boxs {
   margin:0 auto;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
+
   padding: 80px 0;
 
   .case_name_title {
@@ -68,12 +128,7 @@
   }
 
   .sboxs {
-    position: relative;
-    display: inline-block;
-    margin: 25px 0 10px 0;
-    width: 100% !important;
-    height: 40px;
-    @include border-radius(3px); 
+
     // select {
     //   width: 100%;
     //   height: 100%;
@@ -88,12 +143,39 @@
     //     padding-left: 5px;
     //   }
     // }
-    .fa-angle-down {
-      position: absolute;
-      right: 10px;
-      top: 4px;
-      font-size: 24px;
-      color: rgba(3, 163, 232, 1.00);
+    .bootstrap-select {
+      position: relative;
+      display: inline-block;
+      margin: 25px 0 10px 0;
+      width: 100% !important;
+      height: 40px;
+      @include border-radius(3px); 
+
+      .bootstrap-select {
+        width: 100%;
+      }
+      .fa-angle-down {
+        position: absolute;
+        right: 10px;
+        top: 4px;
+        font-size: 24px;
+        color: rgba(3, 163, 232, 1.00);
+      }
+        // 
+      .caret {
+        display: inline-block;
+        top: 7px !important;
+        right: 7px !important;
+        width: 20px !important;
+        height: 20px !important;
+        border: 0 !important;
+        &:before {
+          content: "\f107";
+          font-family: 'FontAwesome';
+          font-size: 18px;
+          color: rgba(29, 176, 237, 1.00);
+        }
+      }
     }
   }
 
@@ -399,6 +481,8 @@
         width: calc(100% / 8);
         height: 90px;
         z-index: 2;
+        color: rgba(171, 171, 172, 1.00);
+        text-decoration: none;
         @include range-width(0, 700px){
           width: calc(100% / 4);
           &:nth-child(n + 5) {
@@ -451,6 +535,7 @@
             @include border-radius(2px);
             color: white;
             font-size: 10px;
+            z-index: 1;
             
             &:after {
               content: '';
@@ -462,6 +547,7 @@
               height: 7px;
               background-color: rgba(57, 191, 242, 1.00);
               @include rotate(45deg);
+              z-index: -1;
             }
           }
           span {
@@ -527,7 +613,7 @@
       padding: 0 60px;
     }
     padding-bottom: 40px;
-    border: 1px solid rgba(255, 0, 0, .3);
+    
 
     .block {
       display: inline-block;
@@ -588,6 +674,12 @@
         }
       }
     }
+    .new {
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
     .btns {
       position: relative;
       margin-top: 30px;
@@ -600,15 +692,24 @@
         width: 130px;
         text-align: center;
       }
-      .b1 {
-        margin: 0 auto;
+      @include range-width(0, 500px){
+        margin-top: 10px;
+        > * {
+          width: 100%;
+        }
       }
-      .b2 {
-        float: right;
-      }
-      .b3 {
-        float: left;
-      }
+      @include range-width(500px){
+
+        .b1 {
+          margin: 5px auto;
+        }
+        .b2 {
+          float: right;
+        }
+        .b3 {
+          float: left;
+        } 
+      };
     }
     .area {
       border: 1px solid rgba(240, 241, 242, 1.00);
@@ -637,13 +738,43 @@
         margin-top: 10px;
         width: 100%;
       }
+      .sboxs {
+        width: 100%;
+        margin-top: 10px;
+        > * {
+          width: 100%;
+        }
+        .caret {
+          display: inline-block;
+          top: 7px !important;
+          right: 7px !important;
+          width: 20px !important;
+          height: 20px !important;
+          border: 0 !important;
+          &:before {
+            content: "\f107";
+            font-family: 'FontAwesome';
+            font-size: 18px;
+            color: rgba(29, 176, 237, 1.00);
+          }
+        }
+      }
+      &.s {
+        .sboxs, input, textarea {
+          width: 50%;
+          margin-top: 10px;
+          @include range-width(0, 500px){
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
 
 
 
-#footer {
+#footer.my-footer {
   background-color: rgba(255, 255, 255, 1.00) !important;
   text-align: center;
   padding-bottom: 20px;
@@ -691,5 +822,91 @@
   .bottom {
     font-size: 13px;
 
+  }
+}
+.input-group {
+  input {
+    margin-top: 0 !important;
+  }
+}
+.roww {
+  @include clearfix();
+  + .roww {
+    margin-top: 10px;
+  }
+
+  .checkbox {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    margin-top: 10px;
+    float: left;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid rgba(189, 189, 189, 1.00);
+
+    > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    input {
+      @include opacity(0);
+      z-index: 1;
+      &:checked {
+        + span {
+          @include opacity(1);
+        }
+      }
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      line-height: 20px;
+      text-align: center;
+      z-index: 2;
+      color: rgba(0, 165, 237, 1.00);
+      @include opacity(0);
+      @include transition(opacity .3s);
+      
+    }
+    + div {
+      float: left;
+      display: inline-block;
+      width: 130px;
+      margin-top: 8px;
+      text-align: center;
+      height: 24px;
+
+      @include range-width(0, 450px){
+        width: calc(100% - 22px);
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+  }
+  > input {
+    float: left;
+    width: calc(100% - 130px - 22px) !important;
+    margin-top: 0 !important;
+    @include range-width(0, 450px){
+      width: 100% !important;
+      margin-top: 10px !important;
+    }
+  }
+  .input-group {
+    float: left;
+    width: calc(100% - 130px - 22px);
+    @include range-width(0, 450px){
+      width: 100%;
+      margin-top: 10px !important;
+    };
+    input {
+      height: 35px;
+    }
   }
 }

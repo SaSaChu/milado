@@ -20,6 +20,7 @@
   ============================================= -->
 
     <!-- style -->
+    <link rel="stylesheet" href="http://www.jqueryscript.net/demo/Nice-Clean-File-Input-Plugin-With-jQuery-Bootstrap-3-Bootstrap-Fileinput/css/fileinput.css" type="text/css" />
     <link rel="stylesheet" href="css/components/bs-select.css" type="text/css" />
     <link rel="stylesheet" href="css/filmulus-style.css" type="text/css" />
     <link rel="stylesheet" href="css/t-class-style.css" type="text/css" />
@@ -55,11 +56,11 @@
           <nav id="primary-menu">
 
             <ul>
-                <li class="current"><a href="index.html"><div>首頁</div></a></li>
-                <li><a href="crowdfunding.html"><div>投資機會</div></a></li>
-                <li><a href="index.html"><div>如何運作</div></a></li>
-                <li><a href="sign-in.html"><div>註冊 / 登入</div></a></li>                      
-            </ul>
+                            <li class="current"><a href="index.html"><div>首頁</div></a></li>
+                            <li><a href="crowdfunding.html"><div>投資機會</div></a></li>
+                            <li><a href="index.html"><div>如何運作</div></a></li>
+                            <li><a href="sign-in.html"><div>註冊 / 登入</div></a></li>                      
+                        </ul>
 
             <!-- Top Search
             ============================================= -->
@@ -81,14 +82,23 @@
          
     <!-- Page Title
     ============================================= -->
-    <section id="page-title" class="page-title-center casebannerimg dark-page-title">
-
+    <section id="page-title" class="page-title-center caseimg">
       <div class="container clearfix">
-        <nav><a href="">首頁</a><i> > </i><a href="">會員中心</a><i> > </i><a href="">我的專案</a></nav>
-        <div>
-          <h1>實現理想的第一步</h1>
-          <p>第一次提案嗎？先到我們的 <a href='' target='_blank'>提案教室</a> 上課吧！</p>
+        <div class='ctop_boxs'>
+
+          <div class='ctop_left'>
+            <div class='ctoptile'>我的募資案</div>
+            <div class='ctop_tag'>
+              <div><a href="">首頁</a></div>
+              <div><a href="">會員中心</a></div>
+              <div><a href="">我的募資</a></div>
+            </div>
+          </div>
+          <div class='ctop_right'>
+            <a href=""><i class="fa fa-eye" aria-hidden="true"></i>預覽專案</a>
+          </div>
         </div>
+
       </div>
     </section>
     <!-- #page-title end -->
@@ -100,37 +110,104 @@
 
         <!-- 輸入名稱 開始 -->
         <div class="container clearfix">
-            <div class='case_index_boxs'>
-                <div class='case_name_title'>創建一個新的計畫！</div>
-                <input class='case_name' placeholder='請輸入計畫名稱'>
-                <div class='sboxs'>
-                  <select class="selectpicker">
-                      <option>Mustard</option>
-                      <option>Ketchup</option>
-                      <option>Relish</option>
-                  </select>
+            <header>
+              <h1>嗨，募資案的名稱</h1>
+              <p>請填寫您的專案基本資料，若有提案問題可參閱 <a href="">常見問題</a></p>
+            </header>
+            
+            <div id='items'>
+              <a href='case_step1.html' class='item ed'>
+                <div>
+                  <div>01</div>
+                  <span>故事介紹</span>
                 </div>
-                <p>您必須符合我們的『使用者條款』，並且無任何信用、欠款問題。為了確保贊助者的權益，您的募資計畫需為原創內容，並非抄襲及違法的募資事項。募集的資金不得用於與專案無關的用途，且募資計畫需要有明確欲完成的目標。計畫中需提供非投資、借貸的回饋項目，亦即不得有股份、借貸等性質的回饋內容。</p>
-                
-                <div class='checkboxs'>
-                  <label class='checkbox'>
-                    <input type='checkbox'>
-                    <span class='fa fa-check'></span> 
-                  </label>
-
-                  <div class='yestype'>我已經閱讀並且瞭解<a href="">使用者條款</a></div>
+              </a>
+              <a href='case_step2.html' class='item ed'>
+                <div>
+                  <div>02</div>
+                  <span>導演介紹</span>
                 </div>
-                
-                <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen">創建計畫</a>
+              </a>
+              <a href='case_step3.html' class='item ed'>
+                <div>
+                  <div>03</div>
+                  <span>演員介紹</span>
+                </div>
+              </a>
+              <a href='case_step4.html' class='item ed'>
+                <div>
+                  <div>04</div>
+                  <span>財務說明</span>
+                </div>
+              </a>
+              <a href='case_step5.html' class='item ed'>
+                <div>
+                  <div>05</div>
+                  <span>文件下載</span>
+                </div>
+              </a>
+              <a href='case_step6.html' class='item now'>
+                <div>
+                  <div>06</div>
+                  <span>公司介紹</span>
+                </div>
+              </a>
+              <a href='case_step7.html' class='item'>
+                <div>
+                  <div>07</div>
+                  <span>募資目標</span>
+                </div>
+              </a>
+              <a href='case_step8.html' class='item'>
+                <div>
+                  <div>08</div>
+                  <span>？？？？</span>
+                </div>
+              </a>
             </div>
         </div>
-       
-        <!-- 輸入名稱 結束 -->
+        
+    </section>
+    <section id="form">
+
+      <!-- 輸入名稱 開始 -->
+      <div class="container clearfix">
+        <div class='area'>
+          <div class='title'>公司名稱</div>
+          <input placeholder='公司名稱'>
+        </div>
+
+        <div class='area'>
+          <div class='title'>公司電話</div>
+          <input placeholder='公司電話'>
+        </div>
+
+        <div class='area'>
+          <div class='title'>聯絡 E-Mail</div>
+          <input placeholder='聯絡 E-Mail'>
+        </div>
+
+        <div class='area'>
+          <div class='title'>公司地址</div>
+          <input placeholder='公司地址'>
+        </div>
+
+
+        <div class='btns'>
+
+          <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen b1">儲存</a>
+          <a href="#" class="button button-3d button-xlarge button-rounded button-gray b2">下一步</a>
+          <a href="#" class="button button-3d button-xlarge button-rounded button-gray b3">上一步</a>
+
+        </div>
+      </div>
+
     </section>
     <!-- #content end -->
 
 
-<!-- Footer
+
+    <!-- Footer
     ============================================= -->
     <footer id="footer" class='my-footer'>
       <div class="container">
@@ -150,7 +227,6 @@
     </footer>
     <!-- #footer end -->
 
-
   </div><!-- #wrapper end -->
 
   <!-- Go To Top
@@ -161,7 +237,7 @@
   ============================================= -->
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/plugins.js"></script>
-  <script type="text/javascript" src="js/components/bs-select.js"></script>
+
   <!-- Footer Scripts
   ============================================= -->
   <script type="text/javascript" src="js/functions.js"></script>

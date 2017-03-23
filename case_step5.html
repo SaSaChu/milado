@@ -21,6 +21,7 @@
 
     <!-- style -->
     <link rel="stylesheet" href="http://www.jqueryscript.net/demo/Nice-Clean-File-Input-Plugin-With-jQuery-Bootstrap-3-Bootstrap-Fileinput/css/fileinput.css" type="text/css" />
+    <link rel="stylesheet" href="css/components/bs-select.css" type="text/css" />
     <link rel="stylesheet" href="css/filmulus-style.css" type="text/css" />
     <link rel="stylesheet" href="css/t-class-style.css" type="text/css" />
   <title>Filmulus</title>    
@@ -113,33 +114,33 @@
               <h1>嗨，募資案的名稱</h1>
               <p>請填寫您的專案基本資料，若有提案問題可參閱 <a href="">常見問題</a></p>
             </header>
-
+            
             <div id='items'>
-              <a href='case_step1.html' class='item now'>
+              <a href='case_step1.html' class='item ed'>
                 <div>
                   <div>01</div>
                   <span>故事介紹</span>
                 </div>
               </a>
-              <a href='case_step2.html' class='item'>
+              <a href='case_step2.html' class='item ed'>
                 <div>
                   <div>02</div>
                   <span>導演介紹</span>
                 </div>
               </a>
-              <a href='case_step3.html' class='item'>
+              <a href='case_step3.html' class='item ed'>
                 <div>
                   <div>03</div>
                   <span>演員介紹</span>
                 </div>
               </a>
-              <a href='case_step4.html' class='item'>
+              <a href='case_step4.html' class='item ed'>
                 <div>
                   <div>04</div>
                   <span>財務說明</span>
                 </div>
               </a>
-              <a href='case_step5.html' class='item'>
+              <a href='case_step5.html' class='item now'>
                 <div>
                   <div>05</div>
                   <span>文件下載</span>
@@ -171,8 +172,28 @@
 
       <!-- 輸入名稱 開始 -->
       <div class="container clearfix">
+        
+        <div class='block'>
+          <header>
+            <div class='l'>
+              <span>01</span>
+              <span>文件 1</span>
+            </div>
+            <div class='r'>
+              <a href="" class='fa fa-trash'>刪除</a>
+            </div>
+          </header>
+           
+
+          
+          
           <div class='area'>
-            <div class='title'>故事封面照</div>
+            <div class='title'>文件名稱</div>
+            <input placeholder='文件名稱'>
+          </div>
+
+          <div class='area'>
+            <div class='title'>文件上傳</div>
             <div class="form-group">
               <div class="file-input file-input-new"><input type="hidden"><div class="file-preview ">
                  <div class="file-preview-status text-center text-success"></div>
@@ -192,67 +213,25 @@
               </div>
           </div>
           
-          <div class='area'>
-            <div class='title'>故事封面照</div>
-            <input type='text' placeholder='dddd' />
-          </div>
+
           
           <div class='area'>
-            <div class='title'>故事大綱</div>
-            <textarea placeholder='dddd'></textarea>
+            <div class='title'>文件簡敘</div>
+            <input placeholder='文件簡敘'>
           </div>
+
+        </div>
+
           
+        <a href="#" class="button button-3d button-xlarge button-rounded button-green new">新增文件</a>
 
+        <div class='btns'>
 
+          <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen b1">儲存</a>
+          <a href="#" class="button button-3d button-xlarge button-rounded button-gray b2">下一步</a>
+          <a href="#" class="button button-3d button-xlarge button-rounded button-gray b3">上一步</a>
 
-          <div class='block'>
-            <header>
-              <div class='l'>
-                <span>01</span>
-                <span>財務1</span>
-              </div>
-              <div class='r'>
-                <a href="" class='fa fa-trash'>刪除</a>
-              </div>
-            </header>
-
-            <div class='area'>
-              <div class='title'>故事封面照</div>
-              <div class="form-group">
-                <div class="file-input file-input-new"><input type="hidden"><div class="file-preview ">
-                   <div class="file-preview-status text-center text-success"></div>
-                   <div class="close fileinput-remove text-right">×</div>
-                   <div class="file-preview-thumbnails"></div>
-                   <div class="clearfix"></div></div>
-                <div class="input-group ">
-                   <div class="form-control file-caption ">
-                   <span class="glyphicon glyphicon-file"></span> <span class="file-caption-name"></span>
-                </div>
-                   <div class="input-group-btn">
-                       <button type="button" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-ban-circle"></i> Remove</button>
-                       <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-upload"></i> 上傳</button>
-                       <div class="btn btn-primary btn-file"> <i class="fa fa-folder-open"></i> &nbsp;瀏覽 <input id="file-1" type="file" class="file" multiple="true" data-preview-file-type="any"></div>
-                   </div>
-                </div></div>
-                </div>
-            </div>
-            
-            <div class='area'>
-              <div class='title'>故事封面照</div>
-              <input type='text' placeholder='dddd' />
-            </div>
-            
-            <div class='area'>
-              <div class='title'>故事大綱</div>
-              <textarea placeholder='dddd'></textarea>
-            </div>
-          </div>
-
-          <div class='btns'>
-            <a href="#" class="button button-3d button-xlarge button-rounded button-dirtygreen b1">儲存</a>
-            <a href="#" class="button button-3d button-xlarge button-rounded button-gray b2">下一步</a>
-            
-          </div>
+        </div>
       </div>
 
     </section>
