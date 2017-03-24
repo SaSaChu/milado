@@ -1,0 +1,12 @@
+@import "_oa";
+
+
+#page-title {
+
+  &.howtopimg {
+    background: url(../images/case/cbanner01.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+    height: 240px;
+  }
+}

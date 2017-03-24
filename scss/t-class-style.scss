@@ -805,6 +805,7 @@
         }
 
         &.f_center {
+          padding-bottom: 40px;
           text-align: center;
         }
       }
@@ -815,7 +816,7 @@
         text-align: center;
         color: rgba(0, 165, 237, 1.00);
         font-size: 200px;
-        padding: 20px 0;
+        padding-top: 20px;
       }
 
       .titel_f {
@@ -823,7 +824,7 @@
         font-weight: bolder;
         color: rgba(60, 60, 60, 1.00);
         text-align: center;
-        padding-top: 30px;
+        padding-top: 15px;
       }
 
       .form-group {

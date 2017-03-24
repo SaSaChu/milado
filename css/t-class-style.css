@@ -942,6 +942,7 @@
   padding-top: 0;
 }
 #form .container .area .title.f_center {
+  padding-bottom: 40px;
   text-align: center;
 }
 #form .container .area .fa-check {
@@ -950,14 +951,14 @@
   text-align: center;
   color: #00a5ed;
   font-size: 200px;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 #form .container .area .titel_f {
   font-size: 24px;
   font-weight: bolder;
   color: #3c3c3c;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 #form .container .area .form-group {
   margin-top: 10px;
