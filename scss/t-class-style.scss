@@ -10,6 +10,7 @@
     .container {
       position: relative;
       height: 260px;
+
       > div {
         position: absolute;
         top: 140px;
@@ -22,6 +23,7 @@
             font-size: 14px !important;
           }
         };
+
         h1 {
           color: white !important;
           &:after {
@@ -38,6 +40,7 @@
           }
         }
       }
+
       nav {
         position: absolute;
         left: 10px;
@@ -277,6 +280,7 @@
     padding: 10px;
     background: url(../images/index/blue-bg.jpg) 50% 50% no-repeat;
     background-size: cover;
+    border:0;
   }
 }
 
@@ -339,6 +343,11 @@
       font-size: 30px; 
       color:white;
       font-weight: bolder;
+
+      &.view {
+        // padding-top: 20px;
+        line-height: 67px;
+      }
     }
 
     .ctop_tag {
@@ -794,6 +803,26 @@
         &:first-child {
           padding-top: 0;
         }
+
+        &.f_center {
+          text-align: center;
+        }
+      }
+
+      .fa-check {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: rgba(0, 165, 237, 1.00);
+        font-size: 200px;
+        padding: 20px 0;
+      }
+
+      .titel_f {
+        font-size: 24px;
+        font-weight: bolder;
+        color: rgba(60, 60, 60, 1.00);
+        text-align: center;
       }
 
       .form-group {

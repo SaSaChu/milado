@@ -281,6 +281,7 @@
   padding: 10px;
   background: url(../images/index/blue-bg.jpg) 50% 50% no-repeat;
   background-size: cover;
+  border: 0;
 }
 
 .ctop_boxs {
@@ -360,6 +361,9 @@
   font-size: 30px;
   color: white;
   font-weight: bolder;
+}
+.ctop_boxs .ctop_left .ctoptile.view {
+  line-height: 67px;
 }
 .ctop_boxs .ctop_left .ctop_tag > div {
   display: inline-block;
@@ -936,6 +940,23 @@
 }
 #form .container .area .title:first-child {
   padding-top: 0;
+}
+#form .container .area .title.f_center {
+  text-align: center;
+}
+#form .container .area .fa-check {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #00a5ed;
+  font-size: 200px;
+  padding: 20px 0;
+}
+#form .container .area .titel_f {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #3c3c3c;
+  text-align: center;
 }
 #form .container .area .form-group {
   margin-top: 10px;
