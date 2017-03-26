@@ -127,11 +127,31 @@
   opacity: 1;
 }
 
-#page-title.howtopimg {
-  background: url(../images/case/cbanner01.jpg) 50% 50% no-repeat;
-  background-size: cover;
-  padding-top: 25px;
+#page-title {
   height: 240px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+#page-title video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  min-width: 100%;
+  min-height: 100%;
+}
+#page-title #play {
+  position: absolute;
+  left: calc(50% - 50px / 2);
+  top: calc(50% - 50px / 2);
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: center;
+  color: white;
 }
 
 .content-wrap.howtoimg {

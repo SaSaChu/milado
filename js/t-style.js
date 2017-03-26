@@ -70,5 +70,7 @@ $(function () {
       }
     });
   });
-
+  $('#play').click (function () {
+    $(this).prev ().get (0).play ();
+  });
 });
