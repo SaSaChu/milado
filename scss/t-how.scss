@@ -2,40 +2,80 @@
 
 .navboxs {
   display: inline-block;
-  width: 100%;
+  width: 100% !important;
   height: 45px;
   background-color: rgba(242, 240, 240, 1.00);
-
-  &.fix2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999999999;
-
-    + * {
-      margin-top: 65px;
-    }
+  @include range-width(0, 800px){
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
+
 
   .navbox {
     margin: 0 auto;
-    width: 880px;
-    border: 1px solid rgba(255, 0, 0, .3);
+    max-width: 880px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    @include clearfix();
+    
 
     > .ii {
+      position: relative;
       display: inline-block;
-      padding: 0 15px;
-      border: 1px solid rgba(255, 0, 0, .3);
+      float: left;
+      width: calc(100% / 6);
+      padding: 0;
       text-align: center;
+      height: 45px;
       line-height: 40px;
 
+      + .ii {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 10px;
+          display: inline-block;
+          width: 1px;
+          height: calc(100% - 10px * 2);
+          background-color: rgba(0, 0, 0, 1.00);
+        }
+      }
+
       a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
         cursor: pointer;
-        padding: 0 15px;
         font-size: 16px;
-        color: rgba(0, 28, 42, 1.00);
         font-weight: 300px;
         text-decoration: none;
+        color: rgba(0, 28, 42, 1.00);
+        @include overflow-docx3();
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: -2px;
+          display: inline-block;
+          width: 0;
+          height: 3px;
+          background-color: #00a5ec;
+          @include opacity(0);
+          @include transition(left 0.3s, width 0.3s, opacity 0.3s);
+        }
+        &.active {
+          &:after {
+            left: 0;
+            width: 100%;
+            @include opacity(1);
+          }
+        }
       }
     }
   }
@@ -386,3 +426,24 @@
 
 
 
+
+
+#tags2 {
+  @include range-width(990px) {
+    &.fix {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      background-color: white;
+      margin-bottom: 0 !important;
+      z-index: 99999;
+      border-bottom: 1px solid rgba(196, 196, 196, 1.00);
+
+      + * {
+        margin-top: 45px;
+      }
+    }
+  }
+}
