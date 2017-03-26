@@ -217,6 +217,14 @@
 .how .how_if_boxs .item_boxs {
   position: relative;
 }
+.how .how_if_boxs .item_boxs.show .item .icon {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.how .how_if_boxs .item_boxs.show .item .info {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
 .how .how_if_boxs .item_boxs .item {
   margin-top: 50px;
   padding: 0 10px;
@@ -235,11 +243,23 @@
   width: 230px;
   height: 103px;
   float: left;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 .how .how_if_boxs .item_boxs .item .info {
   display: inline-block;
   float: left;
   width: calc(100% - 230px);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 .how .how_if_boxs .item_boxs .item .info .info_title {
   display: inline-block;
@@ -260,6 +280,126 @@
 .how .how_if_boxs .item_boxs .item .info .info_det .info_o {
   display: inline-block;
   color: #ee8404;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(1) .icon {
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(1) .info {
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(2) .icon {
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(2) .info {
+  -moz-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
+  -webkit-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(3) .icon {
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(3) .info {
+  -moz-transition-delay: 1.3s;
+  -o-transition-delay: 1.3s;
+  -webkit-transition-delay: 1.3s;
+  transition-delay: 1.3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(4) .icon {
+  -moz-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(4) .info {
+  -moz-transition-delay: 1.8s;
+  -o-transition-delay: 1.8s;
+  -webkit-transition-delay: 1.8s;
+  transition-delay: 1.8s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(5) .icon {
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(5) .info {
+  -moz-transition-delay: 2.3s;
+  -o-transition-delay: 2.3s;
+  -webkit-transition-delay: 2.3s;
+  transition-delay: 2.3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(6) .icon {
+  -moz-transition-delay: 2.5s;
+  -o-transition-delay: 2.5s;
+  -webkit-transition-delay: 2.5s;
+  transition-delay: 2.5s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(6) .info {
+  -moz-transition-delay: 2.8s;
+  -o-transition-delay: 2.8s;
+  -webkit-transition-delay: 2.8s;
+  transition-delay: 2.8s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(7) .icon {
+  -moz-transition-delay: 3s;
+  -o-transition-delay: 3s;
+  -webkit-transition-delay: 3s;
+  transition-delay: 3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(7) .info {
+  -moz-transition-delay: 3.3s;
+  -o-transition-delay: 3.3s;
+  -webkit-transition-delay: 3.3s;
+  transition-delay: 3.3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(8) .icon {
+  -moz-transition-delay: 3.5s;
+  -o-transition-delay: 3.5s;
+  -webkit-transition-delay: 3.5s;
+  transition-delay: 3.5s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(8) .info {
+  -moz-transition-delay: 3.8s;
+  -o-transition-delay: 3.8s;
+  -webkit-transition-delay: 3.8s;
+  transition-delay: 3.8s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(9) .icon {
+  -moz-transition-delay: 4s;
+  -o-transition-delay: 4s;
+  -webkit-transition-delay: 4s;
+  transition-delay: 4s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(9) .info {
+  -moz-transition-delay: 4.3s;
+  -o-transition-delay: 4.3s;
+  -webkit-transition-delay: 4.3s;
+  transition-delay: 4.3s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(10) .icon {
+  -moz-transition-delay: 4.5s;
+  -o-transition-delay: 4.5s;
+  -webkit-transition-delay: 4.5s;
+  transition-delay: 4.5s;
+}
+.how .how_if_boxs .item_boxs .item:nth-child(10) .info {
+  -moz-transition-delay: 4.8s;
+  -o-transition-delay: 4.8s;
+  -webkit-transition-delay: 4.8s;
+  transition-delay: 4.8s;
 }
 
 #webg {

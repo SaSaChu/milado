@@ -218,6 +218,17 @@
       // display: inline-block;
       // width: 640px;
 
+      &.show {
+          .item {
+            .icon {
+              @include opacity(1);
+            }
+            .info {
+              @include opacity(1);
+            }
+          }
+      }
+      
       .item {
         margin-top: 50px;
         padding: 0 10px;
@@ -232,6 +243,8 @@
           width: 230px;
           height: 103px;
           float: left;
+          @include opacity(0);
+          @include transition(opacity 1s);
         }
 
         .info {
@@ -239,6 +252,8 @@
           float: left;
           width: calc(100% - 230px);
           // padding-left: 50px;
+          @include opacity(0);
+          @include transition(opacity 1s);
 
           .info_title {
             display: inline-block;
@@ -265,6 +280,21 @@
           }
         }
 
+        // 兩區塊的間隔時間
+        $s1: 0.5;
+        // 圖示與文字間隔時間
+        $s2: 0.3;
+
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            .icon {
+              @include transition-delay(#{$s1 * ($i - 1)}s);
+            }
+            .info {
+              @include transition-delay(#{$s1 * ($i - 1) + $s2}s);
+            }
+          }
+        }
       }  
     }
   } 
