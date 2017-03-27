@@ -115,7 +115,6 @@
       text-align: center;
       color: rgba(253, 253, 253, .6);
       font-size: 80px;
-      border: 1px solid rgba(255, 0, 0, .3);
 
       &:hover {
         color: white;
@@ -231,18 +230,56 @@
   }
 
   .how_top_pic {
-    width: 1165px;
+    width: 100%;
+    max-width: 1165px;
     height: 425px;
     margin: 0 auto;
     margin: 60px 0;
+    background-size: 100% !important;
+    @include range-width(0, 430px){
+      height: 120px;
+    }
+    @include range-width(430px, 530px){
+      height: 150px;
+    }
+    @include range-width(530px, 630px){
+      height: 200px;
+    }
+    @include range-width(630px, 750px){
+      height: 230px;
+    }
+    @include range-width(750px, 850px){
+      height: 285px;
+
+    }
+    @include range-width(850px, 1200px){
+      height: 325px;
+    };
   }
 
   .how_top_pic2 {
-    width: 1170px;
+    width: 100%;
+    max-width: 1170px;
     height: 274px;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-size: 100% !important;
+    @include range-width(0, 520px){
+      height: 120px;
+    }
+    @include range-width(520px, 630px){
+      height: 150px;
+    }
+    @include range-width(630px, 725px){
+      height: 180px;
+    }
+    @include range-width(725px, 850px){
+      height: 204px;
+    }
+    @include range-width(850px, 900px){
+      height: 234px;
+    }
   }
 
   button {
@@ -344,20 +381,29 @@
         @include clearfix();
         // @include opacity(0);
         // @include transition(opacity .5s);
-
         .icon {
           display: inline-block;
-          width: 230px;
           height: 103px;
           float: left;
           @include opacity(0);
           @include transition(opacity 1s);
+          @include range-width(0, 550px){
+            display: none;
+          }
+          @include range-width(550px){
+            width: 230px;
+          }
         }
 
         .info {
           display: inline-block;
           float: left;
-          width: calc(100% - 230px);
+          @include range-width(0, 550px){
+            width: 100%;
+          }
+          @include range-width(550px){
+            width: calc(100% - 230px);
+          }
           // padding-left: 50px;
           @include opacity(0);
           @include transition(opacity 1s);
@@ -413,6 +459,9 @@
   background: url(../images/index/blue-bg.jpg) 50% 50% no-repeat;
   background-size: cover;
   border: 0;
+  @include range-width(0, 768px){
+    padding-bottom: 30px;
+  };
 
   .fu_title {
     display: inline-block;
@@ -465,12 +514,36 @@
   padding-bottom: 0;
 
   .okboxs {
-    height: 300px;
+    // height: 300px;
+    @include clearfix();
 
     .col_one_fourth {
 
       &.ok {
-
+        @include range-width(0, 768px){
+          width: calc(100%);
+          padding: 20px;
+          margin: 0;
+          text-align: left;
+          margin-bottom: 25px !important;
+          
+          .ok_picbg {
+            margin: 0 auto;
+            width: 100% !important;
+            height: 250px !important;
+            background-position: center center !important;
+          }
+        }
+        @include range-width(768px, 1200px){
+          width: calc(50%);
+          padding: 20px;
+          margin: 0;
+          text-align: left;
+          .ok_picbg {
+            margin: 0 auto;
+            width: 100% !important;
+          }
+        };
         .ok_picbg {
           position: relative;
           width: 250px;
@@ -621,6 +694,9 @@
 
 
 #tags2 {
+  @include range-width(0, 700px) {
+    display: none;
+  }
   @include range-width(990px) {
     &.fix {
       position: fixed;
@@ -638,4 +714,32 @@
       }
     }
   }
+}
+#go1 {
+  .how_top_pic {
+
+  }
+}
+
+.index-howto {
+  background: url(../images/how/blue.jpg) 50% 0 no-repeat;
+  
+  @include range-width(0, 767px){
+    background: url(../images/how/blue.jpg) 0 0 no-repeat;
+  };
+}
+#go7 {
+  @include range-width(0, 800px){
+    @include clearfix();
+    
+    .col_one_fourth {
+      float: left;
+      width: 50%;
+      border: 0;
+
+      &:before, &:after {
+        display: none !important;
+      }
+    }
+  };
 }
