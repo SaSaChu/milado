@@ -127,10 +127,12 @@
 }
 
 #page-title {
-  height: 240px;
-  border: 1px solid rgba(255, 0, 0, 0.3);
+  height: 480px;
   overflow: hidden;
   position: relative;
+}
+#page-title.how_vi {
+  padding: 35px 0;
 }
 #page-title video {
   position: absolute;
@@ -142,15 +144,44 @@
 }
 #page-title #play {
   position: absolute;
-  left: calc(50% - 50px / 2);
-  top: calc(50% - 50px / 2);
+  left: calc(50% - 82px / 2);
+  top: calc(50% - 155px / 2);
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(255, 0, 0, 0.3);
+  width: 82px;
   cursor: pointer;
   text-align: center;
+  color: rgba(253, 253, 253, 0.6);
+  font-size: 80px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+#page-title #play:hover {
   color: white;
+}
+#page-title .how_vi_title {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 155px / 2 + 82px + 5px);
+  width: 100%;
+}
+#page-title .how_vi_title .vi01 {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 0;
+}
+#page-title .how_vi_title .vi02 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 0;
+}
+#page-title .how_vi_title .vi02 a {
+  color: #009aed;
+}
+#page-title .how_vi_title .vi02 a:hover {
+  color: rgba(0, 154, 237, 0.8);
 }
 
 .content-wrap.howtoimg {
