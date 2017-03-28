@@ -810,10 +810,17 @@
         }
       }
 
-      .fa-check {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
+      .check {
+
+        &:before {
+          content: '\f00c';
+          font-family: 'FontAwesome';
+          text-align: center;
+          display: inline-block;
+          width: 100%;
+        }
+
+
         color: rgba(0, 165, 237, 1.00);
         font-size: 200px;
         padding-top: 20px;

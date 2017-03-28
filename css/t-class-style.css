@@ -945,13 +945,17 @@
   padding-bottom: 40px;
   text-align: center;
 }
-#form .container .area .fa-check {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
+#form .container .area .check {
   color: #00a5ed;
   font-size: 200px;
   padding-top: 20px;
+}
+#form .container .area .check:before {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  text-align: center;
+  display: inline-block;
+  width: 100%;
 }
 #form .container .area .titel_f {
   font-size: 24px;
